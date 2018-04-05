@@ -4,12 +4,12 @@ header, section, footer, aside, nav, article {display:block}
 ul{list-style:none}
 $color1:#000;
 $color2:#fff;
+$color3:#f2f2f2;
+$color4:red;
+$color5:#d5d5d5;
+$color6:#818181;
+$color7:#2a2a2a;
 
-$color3:#f4f4f4;
-$color4:#1a237e;
-$color5:#666;
-$color6:#ff5722;
-$color7:#80bbde;
 $color8:#292929;
 
 
@@ -36,6 +36,7 @@ html {
 body{
 	@include flexbox;
 	@include font-size(1.4);
+	font-family: "SegoeUI";
 	flex-flow: column;
 	font-display: swap;
 	height: 100vh;
@@ -58,6 +59,20 @@ input::-moz-focus-inner{
 }
 
 
+.flexbox{
+	display: flex;
+}
+.flex-cv{
+	display: flex;
+	align-items: center;
+}
+
+.flex-center{
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+
 .outerwrapper{
 	-webkit-flex: 1;
 	flex: 1;
@@ -65,23 +80,11 @@ input::-moz-focus-inner{
 
 /*** standart classes *****/
 p{}
-a{color:#020000}
+a{color:#020000; transition: .3s;}
 h1{font-size:2.5rem}
 h2{font-size:2.4rem}
 h3{font-size:1.6rem}
 
-@font-face {
-	// font-family: 'ucb';
-	// src: url('../fonts/univers_condensed_bold.eot');
-	// src: url('../fonts/univers_condensed_bold.eot?#iefix') format('embedded-opentype'),
-	// 	 url('../fonts/univers_condensed_bold.woff') format('woff'),
-	// 	 url('../fonts/univers_condensed_bold.ttf') format('truetype'),
-	// 	 url('../fonts/univers_condensed_bold.svg#univers_condensedbold') format('svg');
-	// font-weight: normal;
-	// font-style: normal;
-}
-
-// .ucb{font-family: 'ucb'}
 
 
 .tdn{
@@ -109,7 +112,6 @@ h3{font-size:1.6rem}
 .form-control {
    border: 1px solid $color3;
    border-radius: 0;
-   margin-top: 0.6rem;
 	font-size: 16px;
 	&:focus,
 	&:active{
@@ -120,21 +122,166 @@ h3{font-size:1.6rem}
 
 
 
+/* =top
+---------------------------*/
+.top{
+	background: $color3;
+	font-family: 'CenturyGothic';
+	padding: .7rem 0;
+	.qsearch{
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 15rem;
+		flex-grow: 1;
+		text-align: right;
+	}
+}
+.sisea-search-form{
+	.submit{
+		background: url(../images/icon-search.png) no-repeat center;
+		border: none;
+		height: 20px;
+		width: 26px;
+		cursor: pointer;
+		filter: grayscale(1);
+		transition: .3s filter;
+		&:hover{
+			filter: grayscale(0);			
+		}
+	}
+	.form-control{
+		background: none;
+		border-bottom: 1px solid $color5;
+		font-style: italic;
+		color: $color4;
+		// padding: .3rem 0;
+		padding: 0;
+		margin: 0;
+		height: 26px;
+	}
+}
+/* =/top
+---------------------------*/
+
+
+
 /* =header
 ---------------------------*/
-header{
+.header{
+	a{
+		text-decoration: none;
+	}
+	padding-top: 2rem;
+	&__left{
+		padding-top: 1.6rem;
+		text-align: center;
+		flex-grow: 1;
+	}
+	.contacts{
+		margin-right: 20rem;
+		font-family: 'CenturyGothic';
+		font-style: italic;
+		color: $color6;
+		p{
+			line-height: 1.7;
+		}
+		.call{
+			@extend .tdu;
+			color: $color4;
+		}
+		.tel{
+			font-size: 2.4rem;
+			font-weight: bold;
+			font-style: italic;
+			color: $color4;
+		}
+		.altlink{
+			color: $color1;
+		}
+	}
 }
-
 /* =/header
 ---------------------------*/
 
 
-
-/* =navigation
+/* =mainnav
 ---------------------------*/
-/* =/navigation
+.mainnav{
+	color: $color6;
+	font-family: 'CenturyGothic';
+	font-style: italic;
+	padding-top: 2rem;
+	display: flex;
+	justify-content: center;
+	a{
+		color: inherit;
+	}
+	&__list{
+		display: flex;
+		justify-content: center;
+	}
+	.nav{
+		& > li{
+			margin: 0 1rem;
+			position: relative;
+			a{
+				border-bottom: 1px dashed rgba(0,0,0,0);
+				padding-bottom: .3rem;
+			}
+			&:hover{
+				.subnav{
+					opacity: 1;
+					z-index: 1;
+				}
+				& > a{
+					color: $color4;
+					border-bottom: 1px dashed $color4;					
+				}
+			}
+		}
+		.subnav{
+			left: 0;
+			opacity: 0;
+			padding-top: 10px;
+			position: absolute;
+			top: 20px;
+			transition: .3s opacity;
+			z-index: -1;
+		}
+		ul{
+			background: $color4;
+			min-width: 115px;
+			padding: 5px 0;
+			text-align: left;
+			li{
+				padding: 6px 6px;
+				a{
+					color: $color2;
+					&:hover{
+						border-bottom: 1px dashed;
+					}
+				}
+				&.active{
+					a, span{
+						color: $color2;
+						border-bottom: 1px dashed;
+					}
+				}
+			}
+		}		
+	}
+}
+/* =/mainnav
 ---------------------------*/
 
+
+.slogan{
+	color: $color7;
+	font-size: 2.4rem;
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 2.8rem;
+}
 
 .owl-carousel{
 	.owl-controls{
@@ -177,4 +324,13 @@ header{
 ---------------------------*/
 .footer{
 	margin-top: auto;
+}
+
+
+.text-center{
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
 }

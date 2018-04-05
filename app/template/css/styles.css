@@ -51,6 +51,54 @@
 }
 
 */
+/* font-family: "SegoeUIRegular"; */
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "SegoeUIBold"; */
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold; }
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot");
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.woff") format("woff"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothic.woff2") format("woff2"), url("../fonts/CenturyGothic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothicItalic.woff2") format("woff2"), url("../fonts/CenturyGothicItalic.woff") format("woff");
+  font-style: italic; }
+
+.bold {
+  font-family: "SegoeUIBold"; }
+
+.italic {
+  font-family: "SegoeUIItalic"; }
+
+.bi {
+  font-family: "SegoeUIBoldItalic"; }
+
 /*** reset ***********/
 html, body, ul, ol, li, dl, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, a, img, label {
   margin: 0;
@@ -85,6 +133,7 @@ body {
   display: flex;
   font-size: 14px;
   font-size: 1.4rem;
+  font-family: "SegoeUI";
   flex-flow: column;
   font-display: swap;
   height: 100vh; }
@@ -96,13 +145,26 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+.flexbox {
+  display: flex; }
+
+.flex-cv {
+  display: flex;
+  align-items: center; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .outerwrapper {
   -webkit-flex: 1;
   flex: 1; }
 
 /*** standart classes *****/
 a {
-  color: #020000; }
+  color: #020000;
+  transition: .3s; }
 
 h1 {
   font-size: 2.5rem; }
@@ -113,14 +175,14 @@ h2 {
 h3 {
   font-size: 1.6rem; }
 
-@font-face {}.tdn {
+.tdn {
   text-decoration: none; }
   .tdn:hover {
     text-decoration: underline; }
 
-.tdu {
+.tdu, .header .contacts .call {
   text-decoration: underline; }
-  .tdu:hover {
+  .tdu:hover, .header .contacts .call:hover {
     text-decoration: none; }
 
 .before {
@@ -129,22 +191,135 @@ h3 {
   position: absolute; }
 
 .form-control {
-  border: 1px solid #f4f4f4;
+  border: 1px solid #f2f2f2;
   border-radius: 0;
-  margin-top: 0.6rem;
   font-size: 16px; }
   .form-control:focus, .form-control:active {
-    border-color: #666;
+    border-color: #d5d5d5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(222, 72, 111, 0.3); }
 
+/* =top
+---------------------------*/
+.top {
+  background: #f2f2f2;
+  font-family: 'CenturyGothic';
+  padding: .7rem 0; }
+  .top .qsearch {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15rem;
+    flex-grow: 1;
+    text-align: right; }
+
+.sisea-search-form .submit {
+  background: url(../images/icon-search.png) no-repeat center;
+  border: none;
+  height: 20px;
+  width: 26px;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: .3s filter; }
+  .sisea-search-form .submit:hover {
+    filter: grayscale(0); }
+
+.sisea-search-form .form-control {
+  background: none;
+  border-bottom: 1px solid #d5d5d5;
+  font-style: italic;
+  color: red;
+  padding: 0;
+  margin: 0;
+  height: 26px; }
+
+/* =/top
+---------------------------*/
 /* =header
 ---------------------------*/
+.header {
+  padding-top: 2rem; }
+  .header a {
+    text-decoration: none; }
+  .header__left {
+    padding-top: 1.6rem;
+    text-align: center;
+    flex-grow: 1; }
+  .header .contacts {
+    margin-right: 20rem;
+    font-family: 'CenturyGothic';
+    font-style: italic;
+    color: #818181; }
+    .header .contacts p {
+      line-height: 1.7; }
+    .header .contacts .call {
+      color: red; }
+    .header .contacts .tel {
+      font-size: 2.4rem;
+      font-weight: bold;
+      font-style: italic;
+      color: red; }
+    .header .contacts .altlink {
+      color: #000; }
+
 /* =/header
 ---------------------------*/
-/* =navigation
+/* =mainnav
 ---------------------------*/
-/* =/navigation
+.mainnav {
+  color: #818181;
+  font-family: 'CenturyGothic';
+  font-style: italic;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center; }
+  .mainnav a {
+    color: inherit; }
+  .mainnav__list {
+    display: flex;
+    justify-content: center; }
+  .mainnav .nav > li {
+    margin: 0 1rem;
+    position: relative; }
+    .mainnav .nav > li a {
+      border-bottom: 1px dashed transparent;
+      padding-bottom: .3rem; }
+    .mainnav .nav > li:hover .subnav {
+      opacity: 1;
+      z-index: 1; }
+    .mainnav .nav > li:hover > a {
+      color: red;
+      border-bottom: 1px dashed red; }
+  .mainnav .nav .subnav {
+    left: 0;
+    opacity: 0;
+    padding-top: 10px;
+    position: absolute;
+    top: 20px;
+    transition: .3s opacity;
+    z-index: -1; }
+  .mainnav .nav ul {
+    background: red;
+    min-width: 115px;
+    padding: 5px 0;
+    text-align: left; }
+    .mainnav .nav ul li {
+      padding: 6px 6px; }
+      .mainnav .nav ul li a {
+        color: #fff; }
+        .mainnav .nav ul li a:hover {
+          border-bottom: 1px dashed; }
+      .mainnav .nav ul li.active a, .mainnav .nav ul li.active span {
+        color: #fff;
+        border-bottom: 1px dashed; }
+
+/* =/mainnav
 ---------------------------*/
+.slogan {
+  color: #2a2a2a;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 2.8rem; }
+
 .owl-carousel .owl-controls {
   position: absolute;
   width: 100%;
@@ -166,6 +341,18 @@ h3 {
 ---------------------------*/
 .footer {
   margin-top: auto; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.homepage {
+  background: url(../images/bg.jpg) no-repeat center top;
+  min-height: 985px; }
+  .homepage .slogan {
+    margin-right: 14rem; }
 
 /* =mobile-menu
 ---------------------------*/
