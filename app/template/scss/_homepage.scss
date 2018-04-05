@@ -13,7 +13,7 @@
 		background: rgba(244, 14, 0, .75);
 		height: 42px;
 		left: 50%;
-		margin-left: -940px;
+		margin-left: -630px;
 		position: relative;
 		.slick-arrow{
 			background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAQAAAAT+RSaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBAUOHwSVr6FWAAAAfElEQVQY04XRMQrCUBCE4cGcIWAlWOVUgRxAsBU8kpBWsBVshZwkEBCsfqsMm2JwX/nBvt1ZMbLWmwatT+yZTZcKYjB86CqIh+m5hSOL6VRBnA0LhwriZbpvoeNr6iuIq2GmrdAwmW47pfrfKn4exg0LxkhCiCH2eKhw2h/EYEtKfOsilAAAAABJRU5ErkJggg==") no-repeat center;
@@ -128,7 +128,7 @@
 	.cell{
 		flex-shrink: 0;
 		padding-right: 3.5rem;
-		width: 22%;
+		width: 23.5%;
 	}
 	.intro{
 		&__title{
@@ -156,33 +156,15 @@
 			margin-bottom: 1rem;
 		}
 		a{
+			@extend .line-animate;
 			background-color: $color6;
 			color: $color2;
 			display: inline-block;
 			padding: .3rem .7rem;
 			text-decoration: none;
-			position: relative;
-			overflow: hidden;
-			span{
-				position: relative;
-				z-index: 2;
-			}
-			&:before{
-				@extend .before;
-				height: 100%;
-				width: 100%;
-				background: $color9;
-				top: 0;
-				left: -100%;
-				transition: .3s;
-				z-index: 1;
-			}
-			&:hover{
-				&:before{
-					left: 0;
-					transform: translateX(0);
-				}
-			}
+
+
+
 		}
 	}
 
