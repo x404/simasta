@@ -4,9 +4,20 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 		appendArrows: '.catscarousel-nav .container',
 		prevArrow : '<button type="button" class="slick-prev" aria-label="Назад"></button>',
-		nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"></button>'
+		nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"></button>',
+		autoplay: true,
+		autoplaySpeed: 2000
 	});
 
+
+	$('#slogans').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true, 
+		arrows: false,
+		autoplay: false,
+		autoplaySpeed: 2000
+	});
 
 	// карусель
 	$('#foo1').owlCarousel({

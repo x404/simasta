@@ -1,5 +1,5 @@
 .homepage{
-	background: url(../images/bg.jpg) no-repeat center top;
+	background: url(../images/bg.jpg) no-repeat center 50px;
 	min-height: 985px;
 	.slogan{
 		margin-right: 14rem;
@@ -16,16 +16,17 @@
 		margin-left: -630px;
 		position: relative;
 		.slick-arrow{
-			background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAQAAAAT+RSaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBAUOHwSVr6FWAAAAfElEQVQY04XRMQrCUBCE4cGcIWAlWOVUgRxAsBU8kpBWsBVshZwkEBCsfqsMm2JwX/nBvt1ZMbLWmwatT+yZTZcKYjB86CqIh+m5hSOL6VRBnA0LhwriZbpvoeNr6iuIq2GmrdAwmW47pfrfKn4exg0LxkhCiCH2eKhw2h/EYEtKfOsilAAAAABJRU5ErkJggg==") no-repeat center top;
+			background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAQAAAAT+RSaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBAUOHwSVr6FWAAAAfElEQVQY04XRMQrCUBCE4cGcIWAlWOVUgRxAsBU8kpBWsBVshZwkEBCsfqsMm2JwX/nBvt1ZMbLWmwatT+yZTZcKYjB86CqIh+m5hSOL6VRBnA0LhwriZbpvoeNr6iuIq2GmrdAwmW47pfrfKn4exg0LxkhCiCH2eKhw2h/EYEtKfOsilAAAAABJRU5ErkJggg==") no-repeat center;
 			height: 20px;
-			width: 12px;
+			width: 20px;
 			border: none;
 			cursor: pointer;
-			margin: 12px 9px 0;
+			margin: 12px 7px 0;
 			opacity: .5;
-			transition: .3s opacity;
+			transition: .3s;
 			&:hover{
 				opacity: 1;
+				background-position: 0 center;
 			}
 		}
 		.slick-prev{
@@ -37,12 +38,12 @@
 .cat{
 	&__link{
 		background: rgba(255,255,255, .5);
-		height: 255px;
-		width: 220px;
 		display: block;
+		height: 255px;
+		padding-top: 1rem;
 		text-align: center;
 		text-decoration: none;
-		padding-top: 1rem;
+		width: 220px;
 		&:hover{
 			background: rgba(245,14,0,.75);
 			.cat{
@@ -52,12 +53,7 @@
 				}
 			}
 			img{
-				&:not(.hover){
-					display: none;
-				}
-				&.hover{
-					display: block;
-				}
+				filter: invert(1);
 			}
 		}
 	}
@@ -68,18 +64,157 @@
 	&__title{
 		font-weight: bold;
 		font-size: 2.2rem;
-		text-transform: uppercase;
 		height: 5rem;
+		text-transform: uppercase;
 	}
 	&__pic{
 		@extend .flex-center;
 		height: 10rem;
+		img{
+			transition: .3s filter;
+		}
 		.hover{
 			display: none;
 		}
 	}
+}
 
-	&-nav{
 
+// =slogans
+#slogans{
+	background: rgba(255, 255, 255, .45);
+	font-weight: bold;
+	font-style: italic;
+	color: $color7;
+	padding-top: 5.5rem;
+	.slick-list{
+		font-size: 4.8rem;		
+	}
+	.slick-dots{
+		display: flex;
+		margin-top: 2rem;
+		button{
+			$s: 12px;
+			background: #3e3e3e;
+			border-radius: 50%;
+			border: none;
+			height: $s;
+			margin-right: 1.2rem;
+			text-indent: -9999em;
+			width: $s;
+		}
+		.slick-active{
+			button{
+				background-color: $color8;				
+			}
+		}
 	}
 }
+// =/slogans
+
+
+// =info
+.info{
+	font-family: 'CenturyGothic';
+	justify-content: space-between;
+	padding-top: 5rem;
+	.cell{
+		flex-shrink: 0;
+		// flex-grow: 0;
+		// flex-basis: 25%;
+		width: 22%;
+		padding-right: 3.5rem;
+	}
+	.intro{
+		&__title{
+			background: $color1;
+			color: $color2;
+			font-size: 3.6rem;
+			text-align: center;
+		}
+		&__text{
+			font-family: "SegoeUI";
+			color: $color6;
+			font-style: italic;
+			line-height: 1.5;
+			margin: 2rem 0;
+		}
+		&__link{
+			font-family: "SegoeUI";
+			font-style: italic;
+			@extend .tdn;			
+		}
+	}
+
+	.cats{
+		li{
+			margin-bottom: 1rem;
+		}
+		a{
+			background-color: $color6;
+			color: $color2;
+			display: inline-block;
+			padding: .3rem .7rem;
+			text-decoration: none;
+			position: relative;
+			overflow: hidden;
+			span{
+				position: relative;
+				z-index: 2;
+			}
+			&:before{
+				@extend .before;
+				height: 100%;
+				width: 100%;
+				background: $color9;
+				top: 0;
+				left: -100%;
+				transition: .3s;
+				z-index: 1;
+			}
+			&:hover{
+				&:before{
+					left: 0;
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+
+	.review{
+		background: $color10;
+		color: $color2;
+		font-style: italic;
+		padding: .5rem .8rem 1rem;
+		align-self: flex-start;
+		a{
+			color: inherit;
+		}
+		blockquote{
+			line-height: 1.4;
+			margin: 0;
+			position: relative;
+			padding: 3rem 0 3.5rem;
+			&:before,
+			&:after{
+				@include sprite($icon-quote);
+				@extend .before;
+			}
+			&:before{
+				left: 5px;
+				top: 0;
+			}
+			&:after{
+				right: 5px;
+				bottom: 0;
+				transform: rotate(180deg);
+			}
+		}
+
+		.more{
+			text-align: center;
+			margin-top: 1rem;
+		}
+	}
+}
+// =/info
