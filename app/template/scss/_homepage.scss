@@ -2,7 +2,7 @@
 	background: url(../images/bg.jpg) no-repeat center 50px;
 	min-height: 985px;
 	.slogan{
-		margin-right: 14rem;
+		margin-right: 15rem;
 	}
 }
 
@@ -13,7 +13,7 @@
 		background: rgba(244, 14, 0, .75);
 		height: 42px;
 		left: 50%;
-		margin-left: -630px;
+		margin-left: -940px;
 		position: relative;
 		.slick-arrow{
 			background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAQAAAAT+RSaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBAUOHwSVr6FWAAAAfElEQVQY04XRMQrCUBCE4cGcIWAlWOVUgRxAsBU8kpBWsBVshZwkEBCsfqsMm2JwX/nBvt1ZMbLWmwatT+yZTZcKYjB86CqIh+m5hSOL6VRBnA0LhwriZbpvoeNr6iuIq2GmrdAwmW47pfrfKn4exg0LxkhCiCH2eKhw2h/EYEtKfOsilAAAAABJRU5ErkJggg==") no-repeat center;
@@ -32,6 +32,10 @@
 		.slick-prev{
 			transform: rotate(180deg);
 		}
+	}
+
+	#catcarousel{
+		margin-right: 8rem;
 	}
 }
 
@@ -87,6 +91,7 @@
 	font-style: italic;
 	color: $color7;
 	padding-top: 5.5rem;
+	padding-left: 5.5rem;
 	.slick-list{
 		font-size: 4.8rem;		
 	}
@@ -118,12 +123,12 @@
 	font-family: 'CenturyGothic';
 	justify-content: space-between;
 	padding-top: 5rem;
+	padding-left: 1.8rem;
+	margin-right: 15rem;
 	.cell{
 		flex-shrink: 0;
-		// flex-grow: 0;
-		// flex-basis: 25%;
-		width: 22%;
 		padding-right: 3.5rem;
+		width: 22%;
 	}
 	.intro{
 		&__title{
@@ -212,9 +217,92 @@
 		}
 
 		.more{
-			text-align: center;
+			font-family: "SegoeUI";
 			margin-top: 1rem;
+			text-align: center;
+		}
+	}
+
+	.news{
+		width: 75%;
+	}
+	.clients{
+		width: 25%;
+		.flexbox{
+			flex-wrap: wrap;			
+			a{
+				@extend .flex-center;
+				border: 1px solid rgba(0,0,0,0);
+				text-align: center;
+				width: 33.3%;
+				&:hover{
+					border-color: #f50e00;
+				}
+			}
+		}
+		.more{
+			
+			margin-top: 1rem;
+			text-align: center;
+			a{
+				color: $color9;
+				@extend .tdn;
+			}
 		}
 	}
 }
 // =/info
+
+
+// =news
+.new{
+	font-family: "SegoeUI";
+	margin-right: 3.5rem;
+	&__link{
+		background: $color12;
+		display: block;
+		height: 100%;
+		padding: 1.5rem 1rem 1rem;
+		text-decoration: none;
+		&:hover{			
+			background-color: #8e8e8e;
+			color: $color2;
+			.new{
+				&__title,
+				&__desc,
+				&__more
+				{
+					color: currentColor;
+				}
+			}
+		}
+	}
+	&__meta{
+		font-weight: bold;
+		.month{
+			line-height: 1;
+			font-size: 3rem;
+			text-transform: uppercase;
+		}
+		.date{
+			line-height: 1;
+			font-size: 6rem;
+			font-weight: bold;
+		}
+	}
+	&__title{
+		color: $color9;
+		margin-top: 1.2rem;
+	}
+
+	&__desc{
+		color: $color11;
+		margin: 1rem 0;
+	}
+	&__more{
+		color: $color7;
+		font-style: italic;
+	}
+}
+// =/news
+
