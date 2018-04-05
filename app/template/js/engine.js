@@ -1,4 +1,12 @@
 $(document).ready(function(){
+	$('#catcarousel').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		appendArrows: '.catscarousel-nav .container',
+		prevArrow : '<button type="button" class="slick-prev" aria-label="Назад"></button>',
+		nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"></button>'
+	});
+
 
 	// карусель
 	$('#foo1').owlCarousel({
