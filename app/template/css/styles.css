@@ -153,7 +153,9 @@ input::-moz-focus-inner {
   display: flex;
   align-items: center; }
 
-.flex-center, .cat__pic, .info .clients .flexbox a, .modal-dialog .thank {
+.flex-center, .cat__pic, .info .clients .flexbox a, .modal-dialog .thank, .pagination, .pagination .ditto_page,
+.pagination .current,
+.pagination .sisea-current-page {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -176,9 +178,9 @@ h2 {
 h3 {
   font-size: 1.6rem; }
 
-.tdn, .footer__contacts a, .footer__menu ul li a, .policy a, .info .intro__link, .info .clients .more a {
+.tdn, .footer__contacts a, .footer__menu ul li a, .policy a, .info .intro__link, .info .clients .more a, .pagination a {
   text-decoration: none; }
-  .tdn:hover, .footer__contacts a:hover, .footer__menu ul li a:hover, .policy a:hover, .info .intro__link:hover, .info .clients .more a:hover {
+  .tdn:hover, .footer__contacts a:hover, .footer__menu ul li a:hover, .policy a:hover, .info .intro__link:hover, .info .clients .more a:hover, .pagination a:hover {
     text-decoration: underline; }
 
 .tdu, .header .contacts .call {
@@ -307,7 +309,8 @@ h3 {
     .mainnav .nav ul li {
       padding: 6px 6px; }
       .mainnav .nav ul li a {
-        color: #fff; }
+        color: #fff;
+        white-space: nowrap; }
         .mainnav .nav ul li a:hover {
           border-bottom: 1px dashed; }
       .mainnav .nav ul li.active a, .mainnav .nav ul li.active span {
@@ -703,9 +706,10 @@ label.error {
     .new__link:hover {
       background-color: #8e8e8e;
       color: #fff; }
-      .new__link:hover .new__title, .new__link:hover .new__desc, .new__link:hover .new__more {
+      .new__link:hover .new__title, .new__link:hover .new__desc, .new__link:hover .new__more, .new__link:hover .new__meta {
         color: currentColor; }
   .new__meta {
+    color: #000;
     font-weight: bold; }
     .new__meta .month {
       line-height: 1;
@@ -717,7 +721,8 @@ label.error {
       font-weight: bold; }
   .new__title {
     color: #f50e00;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    min-height: 4.2rem; }
   .new__desc {
     color: #808080;
     margin: 1rem 0 .8rem; }
@@ -1648,7 +1653,8 @@ form .thank {
     font-family: 'CenturyGothic';
     color: #fff;
     font-style: italic;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-bottom: 3rem; }
     .main .title span {
       background: #000;
       font-size: 3.3rem;
@@ -1667,6 +1673,51 @@ main ul {
       text-indent: -5px;
       content: "- "; }
 
+.listNews {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .listNews .new {
+    margin-bottom: 1.8rem;
+    margin-right: 2.4rem;
+    width: 220px; }
+
+/* =pagination
+---------------------------*/
+.pagination {
+  text-align: center;
+  font-style: italic;
+  margin-top: 1.5rem; }
+  .pagination .flexbox {
+    border-top: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    padding: 22px 75px; }
+  .pagination .ditto_page,
+  .pagination .current,
+  .pagination .sisea-current-page {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    margin: 0 5px;
+    text-decoration: none; }
+  .pagination .ditto_page {
+    background-color: #808080;
+    color: #fff; }
+    .pagination .ditto_page:hover {
+      text-decoration: none; }
+  .pagination .ditto_page:hover,
+  .pagination .current,
+  .pagination .sisea-current-page {
+    background-color: #f40e00;
+    color: #fff; }
+  .pagination i.separator {
+    margin: 0 7px; }
+  .pagination a:hover {
+    color: #f2f2f2; }
+
+/* =/pagination
+---------------------------*/
 /* =mobile-menu
 ---------------------------*/
 .show-sm,

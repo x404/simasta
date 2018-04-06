@@ -44,6 +44,7 @@
 		color: $color2;
 		font-style: italic;
 		font-weight: normal;
+		margin-bottom: 3rem;
 		span{
 			background: $color1;
 			font-size: 3.3rem;	
@@ -70,3 +71,67 @@ main{
 		}
 	}	
 }
+
+
+.listNews{
+	margin-left: 2rem;
+	margin-right: 2rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	.new{
+		margin-bottom: 1.8rem;
+		margin-right: 2.4rem;
+		width: 220px;
+	}
+}
+
+/* =pagination
+---------------------------*/
+.pagination{
+	@extend .flex-center;
+	text-align: center;
+	font-style: italic;
+	margin-top: 1.5rem;
+	.flexbox{
+		border-top: 1px solid $color14;
+		border-bottom: 1px solid $color14;
+		padding: 22px 75px;
+	}
+	.ditto_page,
+	.current,
+	.sisea-current-page
+	{
+		@extend .flex-center;
+		$s: 30px;
+		width: $s;
+		height: $s;
+		border-radius: 4px;	
+		margin: 0 5px;
+		text-decoration: none;	
+	}
+	.ditto_page{
+		background-color: $color11;
+		color: $color2;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+	.ditto_page:hover,
+	.current,
+	.sisea-current-page{
+		background-color: $color8;
+		color: $color2;
+	}
+	i.separator{
+		margin: 0 7px;
+	}
+	a{
+		@extend .tdn;
+		&:hover{
+			color: $color3;
+		}
+	}
+
+}
+/* =/pagination
+---------------------------*/

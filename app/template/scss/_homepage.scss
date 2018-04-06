@@ -226,7 +226,6 @@
 			}
 		}
 		.more{
-			
 			margin-top: 1rem;
 			text-align: center;
 			a{
@@ -255,7 +254,8 @@
 			.new{
 				&__title,
 				&__desc,
-				&__more
+				&__more,
+				&__meta
 				{
 					color: currentColor;
 				}
@@ -263,6 +263,7 @@
 		}
 	}
 	&__meta{
+		color: $color1;
 		font-weight: bold;
 		.month{
 			line-height: 1;
@@ -278,6 +279,7 @@
 	&__title{
 		color: $color9;
 		margin-top: 1rem;
+		min-height: 4.2rem
 	}
 
 	&__desc{
