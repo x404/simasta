@@ -44,15 +44,17 @@
 
 .cat{
 	&__link{
+		color: $color1;
 		background: rgba(255,255,255, .5);
 		display: block;
 		height: 255px;
-		padding-top: 1rem;
+		padding: 1rem 1rem;
 		text-align: center;
 		text-decoration: none;
 		width: 220px;
 		&:hover{
 			background: rgba(245,14,0,.75);
+			text-decoration: none;
 			.cat{
 				&__title,
 				&__desc{

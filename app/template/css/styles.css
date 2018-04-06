@@ -559,15 +559,17 @@ label.error {
     margin-right: 8rem; }
 
 .cat__link {
+  color: #000;
   background: rgba(255, 255, 255, 0.5);
   display: block;
   height: 255px;
-  padding-top: 1rem;
+  padding: 1rem 1rem;
   text-align: center;
   text-decoration: none;
   width: 220px; }
   .cat__link:hover {
-    background: rgba(245, 14, 0, 0.75); }
+    background: rgba(245, 14, 0, 0.75);
+    text-decoration: none; }
     .cat__link:hover .cat__title, .cat__link:hover .cat__desc {
       color: #fff; }
     .cat__link:hover img {
@@ -1770,6 +1772,18 @@ main {
     margin-bottom: -1rem; }
 
 /* =/gallery
+---------------------------*/
+/* =catalog
+---------------------------*/
+.catalog {
+  flex-wrap: wrap; }
+  .catalog .cat {
+    margin-bottom: 2rem;
+    margin-right: 3.2rem; }
+    .catalog .cat__link {
+      height: 100%; }
+
+/* =/catalog
 ---------------------------*/
 /* =mobile-menu
 ---------------------------*/
