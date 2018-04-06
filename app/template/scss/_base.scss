@@ -41,16 +41,16 @@ html {
 
 
 body{
-	@include flexbox;
+	// @include flexbox;
 	@include font-size(1.4);
 	font-family: "SegoeUI";
-	flex-flow: column;
+	// flex-flow: column;
 	font-display: swap;
-	height: 100vh;
+	// height: 100vh;
 }
 
 html, body{
-	height: 100%
+	// height: 100%
 }
 
 
@@ -58,6 +58,14 @@ html, body{
 	//ie11
 }
 
+
+.body{
+	-webkit-flex: 1;
+	flex: 1;
+	// display: flex;
+	// flex-flow: column;
+	// min-height: 100vh;	
+}
 
 
 input::-moz-focus-inner{
@@ -81,8 +89,7 @@ input::-moz-focus-inner{
 }
 
 .outerwrapper{
-	-webkit-flex: 1;
-	flex: 1;
+
 }
 
 /*** standart classes *****/
@@ -116,7 +123,8 @@ h3{font-size:1.6rem}
 }
 
 
-.form-control {
+.form-control,
+textarea {
 	font-family: "SegoeUI";
 	border: 1px solid $color3;
 	border-radius: 0;
@@ -502,69 +510,6 @@ h3{font-size:1.6rem}
 
 // forms
 
-.policy{
-	color: $color3;
-	text-align: left;
-	a{
-		@extend .tdn;
-	}
-}
-
-
-
-.user-access + label {
-	cursor: pointer;
-	font-size: 14px;
-	font-style: italic;
-}
-
-.user-access:not(checked) {
-	position: absolute;
-	opacity: 0;
-}
-.user-access:not(checked) + label {
-	color: #808080;
-	display: block;
-	position: relative; /* будем позиционировать псевдочекбокс относительно label */
-	padding: 3px 0 0 40px; /* оставляем слева от label место под псевдочекбокс */
-}
-/* Оформление первой части чекбокса в выключенном состоянии (фон). */
-.user-access:not(checked) + label:before {
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: 1px;
-	width: 30px;
-	height: 30px;
-	background-color: #e6e6e6;
-	border: 1px solid #e6e6e6;
-	border-radius: 3px;
-	text-align: center;
-}
-
-/* Меняем фон чекбокса, когда он включен. */
-.user-access:checked + label:before {
-	// border-color: $color4;
-}
-/* Сдвигаем переключатель чекбокса, когда он включен. */
-.user-access:checked + label:after {
-	content: '*';
-	position: absolute;
-	top: -6px;
-	left: 6px;
-	width: 22px;
-	height: 22px;
-	font-size: 36px;
-}
-
-
-.sending{
-	text-align: center;
-	font-size: 17px;
-	height: 168px;
-	padding-top: 80px;
-}
-
 
 
 
@@ -579,9 +524,3 @@ label.error{
 		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 0, 0, 0.6)
 	}
 }
-
-
-.modal-open{
-	
-}
-

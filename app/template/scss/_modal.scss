@@ -16,43 +16,10 @@
   }
 }
 
-.md-modal{
-	.submit{
-		@include gradient-vertical(#df6576, #b10213);
-		border-radius: 5px;
-		border: none;
-		color: $color2;
-		cursor: pointer;
-		display: block;
-		font-style: italic;
-		margin: 2.2rem auto 0;
-		position: relative;
-		text-align: center;
-		width: 300px;
-		height: 30px;
-		&:after{
-			@extend .before;
-			@include gradient-vertical(#b10213, #df6576);
-			border-radius: 5px;
-			display: block;
-			height: 100%;
-			width: 300px;
-			left: 0;
-			top: 0;
-			opacity: 0;
-			transition: .3s opacity;
-		}
-		span{
-			position: relative;
-			z-index: 2;
-		}
 
-		&:hover{
-			&:after{
-				opacity: 1;
-			}
-		}
-	}
+
+.md-modal{
+
 }
 
 

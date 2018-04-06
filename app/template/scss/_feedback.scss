@@ -1,0 +1,230 @@
+.btn{
+	@include gradient-vertical(#df6576, #b10213);
+	border-radius: 5px;
+	border: none;
+	color: $color2;
+	cursor: pointer;
+	display: block;
+	font-style: italic;
+	margin: 2.2rem auto 0;
+	position: relative;
+	text-align: center;
+	width: 300px;
+	height: 30px;
+	&:after{
+		@extend .before;
+		@include gradient-vertical(#b10213, #df6576);
+		border-radius: 5px;
+		display: block;
+		height: 100%;
+		width: 300px;
+		left: 0;
+		top: 0;
+		opacity: 0;
+		transition: .3s opacity;
+	}
+	span{
+		position: relative;
+		z-index: 2;
+	}
+
+	&:hover{
+		&:after{
+			opacity: 1;
+		}
+	}
+}
+
+
+// .feedback{
+// 	margin-bottom: 1rem;
+// 	.vcard{
+// 		.name{
+// 			display: none;
+// 		}
+// 		.adr{
+// 			margin-top: 20px;
+// 			margin-bottom: 10px;
+// 		}
+// 		.tel{
+// 			text-decoration: none;
+// 			margin-right: .5rem;
+// 		}
+// 		.email{
+// 			margin-left: .5rem;
+// 			@extend .tdn;
+// 		}
+// 		p{
+// 			font-size: 14px;
+// 			line-height: 3;
+// 		}
+// 	}
+
+// 	&__content{
+// 		padding: 25px 0 10px;
+// 	}
+// }
+
+
+
+.feedback
+{
+	position: relative;
+	margin-bottom: -4rem;
+	padding-top: 2.7rem;
+	padding-bottom: 2rem;
+	&__title{
+		font-family: 'CenturyGothic';
+		font-size: 2.2rem;
+		font-style: italic;
+		padding-top: 1.5rem;
+		text-align: center;
+	}
+	.container{
+		max-width: 1070px;
+		padding-bottom: 15px;
+	}
+	&__form{
+		margin: 1.5rem auto 0;
+		padding: 1rem;
+		position: relative;
+		.row{
+			@include flexbox;
+			justify-content: space-between;
+			margin-top: 1.8rem;
+			position: relative;
+
+			&:first-child{
+				margin-top: 0;
+			}
+			input.form-control,
+			textarea{
+				background: #e6e6e6;
+				font-size: 1.4rem;	
+				border: 1px solid $color3;
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+				transition: all .3s;
+				border-radius: 5px;
+				&:disabled{
+					cursor: default;
+					@include placeholder(#ccc);
+				}
+			}
+
+
+			input.form-control{
+				@include placeholder($color7);
+				height: 30px;
+				padding-bottom: 4px;
+				min-width: 352px;
+				width: 32%;
+				text-align: center;
+			}
+
+			textarea{
+				flex: 1;
+				overflow: hidden;
+				height: 9rem;
+				@include placeholder($color7);
+			}
+
+			.error{
+				border: 1px solid red !important
+			}
+		}
+
+		.policy{
+			margin-top: 20px;
+		}
+
+
+		.sending,
+		.thank{
+			height: 238px;
+			padding-top: 105px;
+		}
+	}
+	
+
+	&:after{
+		top: 25px;
+	}
+	&:before{
+		bottom: 20px;
+	}
+
+	&:after,
+	&:before{
+		@extend .before;
+		border-bottom: 1px solid $color4;
+		left: 50%;
+		margin-left: -125px;
+		width: 250px;
+	}
+
+}
+
+
+.policy{
+	color: $color3;
+	text-align: left;
+	a{
+		@extend .tdn;
+	}
+}
+
+
+
+.user-access + label {
+	cursor: pointer;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.user-access:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+.user-access:not(checked) + label {
+	color: #808080;
+	display: block;
+	position: relative; /* будем позиционировать псевдочекбокс относительно label */
+	padding: 3px 0 0 40px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 1px;
+	width: 30px;
+	height: 30px;
+	background-color: #e6e6e6;
+	border: 1px solid #e6e6e6;
+	border-radius: 3px;
+	text-align: center;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+	// border-color: $color4;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+	content: '*';
+	position: absolute;
+	top: -6px;
+	left: 6px;
+	width: 22px;
+	height: 22px;
+	font-size: 36px;
+}
+
+
+.sending{
+	text-align: center;
+	font-size: 17px;
+	height: 168px;
+	padding-top: 80px;
+}
