@@ -67,7 +67,8 @@
 
 
 
-.feedback
+.feedback,
+.order
 {
 	position: relative;
 	margin-bottom: -4rem;
@@ -169,6 +170,15 @@
 		&:after,
 		&:before{
 			display: none;
+		}
+	}
+}
+
+.order{
+	&__form{
+		margin-top: 0;
+		.thank{
+			color: $color1;
 		}
 	}
 }

@@ -1,0 +1,80 @@
+.production{
+	.gallery{
+		margin-top: 3rem;
+	}
+}
+
+.product{
+	margin-right: 1rem;
+	width: 220px;
+	a{
+		margin: 0;
+	}
+	&__meta{
+		background: $color16;
+		padding: .8rem;
+		text-align: center;
+		transition: .3s;
+		.btn-order{
+			background: $color6;
+			border: none;
+			border-radius: 5px;
+			color: $color2;
+			cursor: pointer;
+			font-style: italic;
+			height: 3rem;
+			margin-top: 2.5rem;
+			width: 100%;
+		}
+	}
+
+	img{
+		max-width: 100%;
+	}
+
+	&__title{
+		margin: 0 0 .5rem;
+	}
+
+	&:hover{
+		.product{
+			&__meta{
+				background: $color6;
+				color: $color2;
+				.btn-order{
+					@include gradient-vertical(#df6576, #b10213);
+				}
+			}
+		}
+	}
+}
+
+.accordion{
+	.item{
+		margin-top: 3.5rem;
+	}
+	&__title{
+		font-family: 'CenturyGothic';
+		font-weight: normal;
+		font-style: italic;
+		font-size: 2.4rem;
+		a{
+			background-color: $color6;
+			color: $color2;
+			display: inline-block;
+			padding: .1rem 1.5rem;
+			&:hover{
+				text-decoration: none;
+			}
+			&.collapsed{
+				background: #b4b4b4;
+				&:hover{
+					background-color: $color6;
+				}
+			}
+		}
+	}
+	&__body{
+		padding-top: 2.5rem;
+	}
+}

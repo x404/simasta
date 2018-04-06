@@ -178,7 +178,9 @@ h3 {
   .tdu:hover, .header .contacts .call:hover {
     text-decoration: none; }
 
-.before, .footer__menu ul li a:before, .line-animate:before, .info .cats a:before, .info .review blockquote:before, .info .review blockquote:after, .text-lineboth:before, .text-lineboth:after, .gallery a:after, .gallery a:before, .btn:after, .feedback:after, .feedback:before {
+.before, .footer__menu ul li a:before, .line-animate:before, .info .cats a:before, .info .review blockquote:before, .info .review blockquote:after, .text-lineboth:before, .text-lineboth:after, .gallery a:after, .gallery a:before, .btn:after, .feedback:after, .feedback:before,
+.order:after,
+.order:before {
   content: "";
   display: block;
   position: absolute; }
@@ -1730,25 +1732,30 @@ main {
   .btn:hover:after {
     opacity: 1; }
 
-.feedback {
+.feedback,
+.order {
   position: relative;
   margin-bottom: -4rem;
   padding-top: 2.7rem;
   padding-bottom: 2rem; }
-  .feedback__title {
+  .feedback__title,
+  .order__title {
     font-family: 'CenturyGothic';
     font-size: 2.2rem;
     font-style: italic;
     padding-top: 1.5rem;
     text-align: center; }
-  .feedback .container {
+  .feedback .container,
+  .order .container {
     max-width: 1070px;
     padding-bottom: 15px; }
-  .feedback__form {
+  .feedback__form,
+  .order__form {
     margin: 1.5rem auto 0;
     padding: 1rem;
     position: relative; }
-    .feedback__form .row {
+    .feedback__form .row,
+    .order__form .row {
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-flex;
@@ -1757,10 +1764,13 @@ main {
       justify-content: space-between;
       margin-top: 1.8rem;
       position: relative; }
-      .feedback__form .row:first-child {
+      .feedback__form .row:first-child,
+      .order__form .row:first-child {
         margin-top: 0; }
       .feedback__form .row input.form-control,
-      .feedback__form .row textarea {
+      .feedback__form .row textarea,
+      .order__form .row input.form-control,
+      .order__form .row textarea {
         background: #e6e6e6;
         font-size: 1.4rem;
         border: 1px solid #f2f2f2;
@@ -1769,82 +1779,126 @@ main {
         transition: all .3s;
         border-radius: 5px; }
         .feedback__form .row input.form-control:disabled,
-        .feedback__form .row textarea:disabled {
+        .feedback__form .row textarea:disabled,
+        .order__form .row input.form-control:disabled,
+        .order__form .row textarea:disabled {
           cursor: default; }
           .feedback__form .row input.form-control:disabled::-webkit-input-placeholder,
-          .feedback__form .row textarea:disabled::-webkit-input-placeholder {
+          .feedback__form .row textarea:disabled::-webkit-input-placeholder,
+          .order__form .row input.form-control:disabled::-webkit-input-placeholder,
+          .order__form .row textarea:disabled::-webkit-input-placeholder {
             color: #ccc; }
           .feedback__form .row input.form-control:disabled::-moz-placeholder,
-          .feedback__form .row textarea:disabled::-moz-placeholder {
+          .feedback__form .row textarea:disabled::-moz-placeholder,
+          .order__form .row input.form-control:disabled::-moz-placeholder,
+          .order__form .row textarea:disabled::-moz-placeholder {
             color: #ccc; }
           .feedback__form .row input.form-control:disabled:-ms-input-placeholder,
-          .feedback__form .row textarea:disabled:-ms-input-placeholder {
+          .feedback__form .row textarea:disabled:-ms-input-placeholder,
+          .order__form .row input.form-control:disabled:-ms-input-placeholder,
+          .order__form .row textarea:disabled:-ms-input-placeholder {
             color: #ccc; }
           .feedback__form .row input.form-control:disabled:focus::-webkit-input-placeholder,
-          .feedback__form .row textarea:disabled:focus::-webkit-input-placeholder {
+          .feedback__form .row textarea:disabled:focus::-webkit-input-placeholder,
+          .order__form .row input.form-control:disabled:focus::-webkit-input-placeholder,
+          .order__form .row textarea:disabled:focus::-webkit-input-placeholder {
             transition: line-height 0.5s ease; }
           .feedback__form .row input.form-control:disabled:focus::-moz-placeholder,
-          .feedback__form .row textarea:disabled:focus::-moz-placeholder {
+          .feedback__form .row textarea:disabled:focus::-moz-placeholder,
+          .order__form .row input.form-control:disabled:focus::-moz-placeholder,
+          .order__form .row textarea:disabled:focus::-moz-placeholder {
             transition: line-height 0.5s ease; }
           .feedback__form .row input.form-control:disabled:focus:-ms-input-placeholder,
-          .feedback__form .row textarea:disabled:focus:-ms-input-placeholder {
+          .feedback__form .row textarea:disabled:focus:-ms-input-placeholder,
+          .order__form .row input.form-control:disabled:focus:-ms-input-placeholder,
+          .order__form .row textarea:disabled:focus:-ms-input-placeholder {
             transition: line-height 0.5s ease; }
-      .feedback__form .row input.form-control {
+      .feedback__form .row input.form-control,
+      .order__form .row input.form-control {
         height: 30px;
         padding-bottom: 4px;
         min-width: 352px;
         width: 32%;
         text-align: center; }
-        .feedback__form .row input.form-control::-webkit-input-placeholder {
+        .feedback__form .row input.form-control::-webkit-input-placeholder,
+        .order__form .row input.form-control::-webkit-input-placeholder {
           color: #2a2a2a; }
-        .feedback__form .row input.form-control::-moz-placeholder {
+        .feedback__form .row input.form-control::-moz-placeholder,
+        .order__form .row input.form-control::-moz-placeholder {
           color: #2a2a2a; }
-        .feedback__form .row input.form-control:-ms-input-placeholder {
+        .feedback__form .row input.form-control:-ms-input-placeholder,
+        .order__form .row input.form-control:-ms-input-placeholder {
           color: #2a2a2a; }
-        .feedback__form .row input.form-control:focus::-webkit-input-placeholder {
+        .feedback__form .row input.form-control:focus::-webkit-input-placeholder,
+        .order__form .row input.form-control:focus::-webkit-input-placeholder {
           transition: line-height 0.5s ease; }
-        .feedback__form .row input.form-control:focus::-moz-placeholder {
+        .feedback__form .row input.form-control:focus::-moz-placeholder,
+        .order__form .row input.form-control:focus::-moz-placeholder {
           transition: line-height 0.5s ease; }
-        .feedback__form .row input.form-control:focus:-ms-input-placeholder {
+        .feedback__form .row input.form-control:focus:-ms-input-placeholder,
+        .order__form .row input.form-control:focus:-ms-input-placeholder {
           transition: line-height 0.5s ease; }
-      .feedback__form .row textarea {
+      .feedback__form .row textarea,
+      .order__form .row textarea {
         flex: 1;
         overflow: hidden;
         height: 9rem; }
-        .feedback__form .row textarea::-webkit-input-placeholder {
+        .feedback__form .row textarea::-webkit-input-placeholder,
+        .order__form .row textarea::-webkit-input-placeholder {
           color: #2a2a2a; }
-        .feedback__form .row textarea::-moz-placeholder {
+        .feedback__form .row textarea::-moz-placeholder,
+        .order__form .row textarea::-moz-placeholder {
           color: #2a2a2a; }
-        .feedback__form .row textarea:-ms-input-placeholder {
+        .feedback__form .row textarea:-ms-input-placeholder,
+        .order__form .row textarea:-ms-input-placeholder {
           color: #2a2a2a; }
-        .feedback__form .row textarea:focus::-webkit-input-placeholder {
+        .feedback__form .row textarea:focus::-webkit-input-placeholder,
+        .order__form .row textarea:focus::-webkit-input-placeholder {
           transition: line-height 0.5s ease; }
-        .feedback__form .row textarea:focus::-moz-placeholder {
+        .feedback__form .row textarea:focus::-moz-placeholder,
+        .order__form .row textarea:focus::-moz-placeholder {
           transition: line-height 0.5s ease; }
-        .feedback__form .row textarea:focus:-ms-input-placeholder {
+        .feedback__form .row textarea:focus:-ms-input-placeholder,
+        .order__form .row textarea:focus:-ms-input-placeholder {
           transition: line-height 0.5s ease; }
-      .feedback__form .row .error {
+      .feedback__form .row .error,
+      .order__form .row .error {
         border: 1px solid red !important; }
-    .feedback__form .policy {
+    .feedback__form .policy,
+    .order__form .policy {
       margin-top: 20px; }
     .feedback__form .sending,
-    .feedback__form .thank {
+    .feedback__form .thank,
+    .order__form .sending,
+    .order__form .thank {
       height: 238px;
       padding-top: 105px; }
-  .feedback:after {
+  .feedback:after,
+  .order:after {
     top: 25px; }
-  .feedback:before {
+  .feedback:before,
+  .order:before {
     bottom: 20px; }
-  .feedback:after, .feedback:before {
+  .feedback:after, .feedback:before,
+  .order:after,
+  .order:before {
     border-bottom: 1px solid red;
     left: 50%;
     margin-left: -125px;
     width: 250px; }
-  .feedback-inner {
+  .feedback-inner,
+  .order-inner {
     padding: 0;
     padding-bottom: 3rem; }
-    .feedback-inner:after, .feedback-inner:before {
+    .feedback-inner:after, .feedback-inner:before,
+    .order-inner:after,
+    .order-inner:before {
       display: none; }
+
+.order__form {
+  margin-top: 0; }
+  .order__form .thank {
+    color: #000; }
 
 .policy {
   color: #f2f2f2;
@@ -1896,6 +1950,89 @@ main {
   font-size: 17px;
   height: 168px;
   padding-top: 80px; }
+
+.production .gallery {
+  margin-top: 3rem; }
+
+.product {
+  margin-right: 1rem;
+  width: 220px; }
+  .product a {
+    margin: 0; }
+  .product__meta {
+    background: #e7e7e7;
+    padding: .8rem;
+    text-align: center;
+    transition: .3s; }
+    .product__meta .btn-order {
+      background: #818181;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-style: italic;
+      height: 3rem;
+      margin-top: 2.5rem;
+      width: 100%; }
+  .product img {
+    max-width: 100%; }
+  .product__title {
+    margin: 0 0 .5rem; }
+  .product:hover .product__meta {
+    background: #818181;
+    color: #fff; }
+    .product:hover .product__meta .btn-order {
+      background-image: -webkit-linear-gradient(top, #df6576 0%, #b10213 100%);
+      background-image: -o-linear-gradient(top, #df6576 0%, #b10213 100%);
+      background-image: linear-gradient(to bottom, #df6576 0%, #b10213 100%);
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFDF6576', endColorstr='#FFB10213', GradientType=0); }
+
+.accordion .item {
+  margin-top: 3.5rem; }
+
+.accordion__title {
+  font-family: 'CenturyGothic';
+  font-weight: normal;
+  font-style: italic;
+  font-size: 2.4rem; }
+  .accordion__title a {
+    background-color: #818181;
+    color: #fff;
+    display: inline-block;
+    padding: .1rem 1.5rem; }
+    .accordion__title a:hover {
+      text-decoration: none; }
+    .accordion__title a.collapsed {
+      background: #b4b4b4; }
+      .accordion__title a.collapsed:hover {
+        background-color: #818181; }
+
+.accordion__body {
+  padding-top: 2.5rem; }
+
+.fade {
+  opacity: 0;
+  transition: opacity .15s linear; }
+  .fade.show {
+    opacity: 1; }
+
+.collapse {
+  display: none; }
+  .collapse.show {
+    display: block; }
+
+tr.collapse.show {
+  display: table-row; }
+
+tbody.collapse.show {
+  display: table-row-group; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .35s ease; }
 
 /* =mobile-menu
 ---------------------------*/

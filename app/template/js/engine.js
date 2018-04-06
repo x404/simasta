@@ -73,14 +73,6 @@ $(document).ready(function(){
 			name:{required : true},
 			tel: {validphone:true}
 		},
-		errorPlacement: function(error, element) {
-			if (element.attr('name') == 'name') {
-				$(element).addClass('error')
-			};
-			if (element.attr('name') == 'tel'){
-				$(element).addClass('error')
-			};
-		},
 		submitHandler: function(form){
 			var strSubmit=$(form).serialize();
 			$(form).find('fieldset').hide();
@@ -105,12 +97,53 @@ $(document).ready(function(){
 		}
 	});
 
+
+	// форма обратной связи
+	$('#order-form').validate({
+		rules: {
+			name:{required : true},
+			tel: {validphone:true},
+		},
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$(form).html(thankcallback);
+					startClock('order');
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+				},
+				always: function(){
+					$('.sending').remove();					
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
+
 	$('#totop').click(function (){
 		$("body,html").animate({
 			scrollTop:0
 		}, 800);
 		return false;
 	});
+
+
+	$('.btn-order').click(function(e){
+		e.preventDefault();
+		document.querySelector('#title').value = this.dataset.title;
+	});
+
 
 	// mobile-menu
 	$('#navbar').each(function(){
