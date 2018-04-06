@@ -1840,6 +1840,11 @@ main {
     left: 50%;
     margin-left: -125px;
     width: 250px; }
+  .feedback-inner {
+    padding: 0;
+    padding-bottom: 3rem; }
+    .feedback-inner:after, .feedback-inner:before {
+      display: none; }
 
 .policy {
   color: #f2f2f2;
