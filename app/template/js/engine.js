@@ -59,6 +59,52 @@ $(document).ready(function(){
 	$('.tel').inputmask("+7(999)999-99-99");
 
 
+	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
+	var errorTxt = 'Возникла ошибка при отправке заявки!';
+
+	// validation forms
+	$.validator.addMethod("validphone", function(value){
+		if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
+		else return false;
+	},"");
+
+	$('#callback-form').validate({
+		rules: {
+			name:{required : true},
+			tel: {validphone:true}
+		},
+		errorPlacement: function(error, element) {
+			if (element.attr('name') == 'name') {
+				$(element).addClass('error')
+			};
+			if (element.attr('name') == 'tel'){
+				$(element).addClass('error')
+			};
+		},
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$(form).closest('.modal__body').html(thankcallback);
+					startClock('callback');
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
 	$('#totop').click(function (){
 		$("body,html").animate({
 			scrollTop:0
@@ -159,19 +205,10 @@ function showTime(sendform){
 					$('.feedback__form fieldset').show();
 				});
 				break;
-			case 'cart-form':
-				$('.cart .thank').fadeOut('normal',function(){
-					$('.cart .thank').remove();
-					// $('.cart .form-control, .cart textarea').val('');
-					// $('.cart__form fieldset').show();
-				});
-				break;	
 			default:
 			console.log(sendform);
 				modal = $("#" + sendform);
-				modal.fadeOut('normal',function(){
-					modal.find('.md-close').trigger('click');
-				});
+				modal.find('.md-close').trigger('click');
 				break;
 		}
 	}

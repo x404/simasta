@@ -153,7 +153,7 @@ input::-moz-focus-inner {
   display: flex;
   align-items: center; }
 
-.flex-center, .cat__pic, .info .clients .flexbox a {
+.flex-center, .cat__pic, .info .clients .flexbox a, .modal-dialog .thank {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -510,8 +510,16 @@ h3 {
 .sending {
   text-align: center;
   font-size: 17px;
-  height: 207px;
+  height: 168px;
   padding-top: 80px; }
+
+label.error {
+  display: none !important; }
+
+.form-control.error {
+  border-color: red !important; }
+  .form-control.error:focus, .form-control.error:active {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 0, 0, 0.6); }
 
 .homepage {
   background: url(../images/bg.jpg) no-repeat center 40px;
@@ -824,10 +832,7 @@ perspective effects (not including the modals and the overlay).
   z-index: 2000;
   overflow: hidden;
   outline: 0;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  visibility: hidden; }
 
 .md-show {
   visibility: visible; }
@@ -1055,10 +1060,7 @@ perspective effects (not including the modals and the overlay).
   opacity: 0; }
 
 .md-show.md-effect-9 .md-content {
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  -ms-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+  transform: none;
   opacity: 1; }
 
 /* Effect 10: 3D sign */
@@ -1477,10 +1479,7 @@ perspective effects (not including the modals and the overlay).
   z-index: 2000;
   overflow: hidden;
   outline: 0;
-  visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  visibility: hidden; }
   .modal.show .modal-dialog,
   .md-modal1.show .modal-dialog {
     transform: translate(0, 0); }
@@ -1504,8 +1503,8 @@ perspective effects (not including the modals and the overlay).
     top: -55px; }
   .modal-dialog .thank {
     text-transform: uppercase;
-    padding: 110px 0 120px;
-    font-size: 20px; }
+    font-size: 20px;
+    height: 168px; }
 
 .modal-content {
   position: relative;

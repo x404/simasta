@@ -70,9 +70,9 @@
 	overflow: hidden;
 	outline: 0;
 	visibility: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
+	// -webkit-backface-visibility: hidden;
+	// -moz-backface-visibility: hidden;
+	// backface-visibility: hidden;
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
@@ -107,8 +107,10 @@
 	.thank{
 		// @extend .bi;
 		text-transform: uppercase;
-		padding: 110px 0 120px;
+		// padding: 110px 0 120px;
 		font-size: 20px;
+		height: 168px;
+		@extend .flex-center;
 	}
 }
 

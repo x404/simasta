@@ -47,9 +47,9 @@ perspective effects (not including the modals and the overlay).
 	overflow: hidden;
 	outline: 0;
 	visibility: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
+	// -webkit-backface-visibility: hidden;
+	// -moz-backface-visibility: hidden;
+	// backface-visibility: hidden;
 }
 
 .md-show {
@@ -347,10 +347,12 @@ perspective effects (not including the modals and the overlay).
 }
 
 .md-show.md-effect-9 .md-content {
-	-webkit-transform: rotateX(0deg);
-	-moz-transform: rotateX(0deg);
-	-ms-transform: rotateX(0deg);
-	transform: rotateX(0deg);
+	// -webkit-transform: rotateX(0deg);
+	// -moz-transform: rotateX(0deg);
+	// -ms-transform: rotateX(0deg);
+	// transform: rotateX(0deg);
+	transform: none;
+	// will-change: transform;
 	opacity: 1;
 }
 

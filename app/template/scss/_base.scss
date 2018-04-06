@@ -558,6 +558,26 @@ h3{font-size:1.6rem}
 .sending{
 	text-align: center;
 	font-size: 17px;
-	height: 207px;
+	height: 168px;
 	padding-top: 80px;
+}
+
+
+
+
+label.error{
+	display: none !important;
+}
+
+.form-control.error{
+	border-color: red !important;
+	&:focus,
+	&:active{
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(255, 0, 0, 0.6)
+	}
+}
+
+
+.modal-open{
+	
 }
