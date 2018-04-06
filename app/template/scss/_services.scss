@@ -1,0 +1,101 @@
+.listService{
+	flex-wrap: wrap;
+}
+
+.service{
+	margin-right: 3.2rem;
+	margin-bottom: 1.5rem;
+	width: 220px;
+	&__link{
+		display: block;
+		&:hover{
+			text-decoration: none;
+			.service{
+				&__text{
+					background-color: $color6;
+					color: $color2;
+				}
+				&__title{
+					span{
+						&:before{
+							top: -15px;
+						}
+						&:after{
+							bottom: -15px;
+						}
+					}
+				}
+				&__pic{
+					&:after{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	&__pic{
+		position: relative;
+		img{
+			vertical-align: top;
+			max-width: 100%;
+		}
+		&:after{
+			@extend .before;
+			background: rgba(255, 0, 0, .5);
+			height: 100%;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			width: 100%;
+			transition: .3s opacity;
+		}
+	}
+
+	&__title{
+		color: $color2;
+		@extend .flex-center;
+		font-size: 2.2rem;
+		font-weight: bold;
+		height: 100%;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		top: 0;
+		width: 100%;
+		span{
+			position: relative;
+			width: 100%;
+			z-index: 2;
+			&:before,
+			&:after{
+				@extend .before;
+				background-image: linear-gradient(to right, transparent 0, #fff 50%, transparent 100%);				
+				height: 1px;
+				left: 0;
+				transition: .3s;
+				width: 100%;
+			}
+			&:before{
+				top: -10px;
+			}
+			&:after{
+				bottom: -10px;
+			}
+		}
+	}
+
+	&__text{
+		transition: .3s;
+		background-color: $color16;
+		color: $color1;
+		text-align: center;
+		height: 135px;
+		padding: 1rem .3rem;
+		p{
+			line-height: 1.3;			
+		}
+	}
+}

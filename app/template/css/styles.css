@@ -149,7 +149,7 @@ input::-moz-focus-inner {
 
 .flex-center, .cat__pic, .info .clients .flexbox a, .modal-dialog .thank, .listClients a, .pagination, .pagination .ditto_page,
 .pagination .current,
-.pagination .sisea-current-page {
+.pagination .sisea-current-page, .service__title {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -180,7 +180,7 @@ h3 {
 
 .before, .footer__menu ul li a:before, .line-animate:before, .info .cats a:before, .info .review blockquote:before, .info .review blockquote:after, .text-lineboth:before, .text-lineboth:after, .gallery a:after, .gallery a:before, .btn:after, .feedback:after, .feedback:before,
 .order:after,
-.order:before {
+.order:before, .service__pic:after, .service__title span:before, .service__title span:after {
   content: "";
   display: block;
   position: absolute; }
@@ -2033,6 +2033,75 @@ tbody.collapse.show {
   height: 0;
   overflow: hidden;
   transition: height .35s ease; }
+
+.listService {
+  flex-wrap: wrap; }
+
+.service {
+  margin-right: 3.2rem;
+  margin-bottom: 1.5rem;
+  width: 220px; }
+  .service__link {
+    display: block; }
+    .service__link:hover {
+      text-decoration: none; }
+      .service__link:hover .service__text {
+        background-color: #818181;
+        color: #fff; }
+      .service__link:hover .service__title span:before {
+        top: -15px; }
+      .service__link:hover .service__title span:after {
+        bottom: -15px; }
+      .service__link:hover .service__pic:after {
+        opacity: 1; }
+  .service__pic {
+    position: relative; }
+    .service__pic img {
+      vertical-align: top;
+      max-width: 100%; }
+    .service__pic:after {
+      background: rgba(255, 0, 0, 0.5);
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      transition: .3s opacity; }
+  .service__title {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: bold;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%; }
+    .service__title span {
+      position: relative;
+      width: 100%;
+      z-index: 2; }
+      .service__title span:before, .service__title span:after {
+        background-image: linear-gradient(to right, transparent 0, #fff 50%, transparent 100%);
+        height: 1px;
+        left: 0;
+        transition: .3s;
+        width: 100%; }
+      .service__title span:before {
+        top: -10px; }
+      .service__title span:after {
+        bottom: -10px; }
+  .service__text {
+    transition: .3s;
+    background-color: #e7e7e7;
+    color: #000;
+    text-align: center;
+    height: 135px;
+    padding: 1rem .3rem; }
+    .service__text p {
+      line-height: 1.3; }
 
 /* =mobile-menu
 ---------------------------*/
