@@ -10,8 +10,9 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 
 <meta name="robots" content="noindex,nofollow" />
-
+<!-- TemplateBeginEditable name="doctitle" -->
 <title>Главная</title>
+<!-- TemplateEndEditable -->
 <link rel="stylesheet" href="/template/css/styles.min.css" />
 <script src="/template/js/libs.min.js"></script>
 
@@ -27,10 +28,12 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
 </head>
 <body>
 
-<div class="body homepage">
+<div class="body">
 	<div class="outerwrapper">
 		<!-- =top -->
 		<div class="top">
@@ -64,22 +67,22 @@
 						<nav id="navbar" class="mainnav">
 							<div class="mainnav__list">
 								<ul class="nav nav-tabs mainnav" role="tablist">
-									<li><a href="#">Главная</a></li>
+									<li><a href="/">Главная</a></li>
 									<li class="folder"> 
 										<a href="#">О нас</a>
 										<div class="subnav">
 											<ul>
-												<li><a href="#">О компании</a></li>
+												<li><a href="../about.html">О компании</a></li>
 												<li class="active"><span>Клиенты</span></li>
-												<li><a href="#">Новости</a></li>
-												<li><a href="#">Отзывы</a></li>
+												<li><a href="../news.html">Новости</a></li>
+												<li><a href="../reviews.html">Отзывы</a></li>
 											</ul>
 										</div>
 									</li>
-									<li><a href="#">Услуги</a></li>
-									<li><a href="#">Наши работы</a></li>
+									<li><a href="../services.html">Услуги</a></li>
+									<li><a href="../works.html">Наши работы</a></li>
 									<li><a href="#">Готовая продукция</a></li>
-									<li><a href="#">Контакты</a></li>
+									<li><a href="../contacts.html">Контакты</a></li>
 								</ul>
 								<div class="show-sm">
 									<a href="tel:+123456789">+1234 56-78-89</a>
@@ -118,194 +121,14 @@
 				</div>
 			</header>
 			<!-- =/header -->
-		</div>
-
-		<!-- =cat carousel -->
-		<div class="catscarousel">
-			<div class="container">
-				<div id="catcarousel">
-					<div>
-						<div class="cat">
-							<a href="#" class="cat__link">
-								<p class="cat__title">Галстуки</p>
-								<div class="cat__pic">
-									<img src="/images/cat-1.png" alt="" />
-								</div>
-								<div class="cat__desc">
-									Создавая галстуки в фирменном стиле, мы разрабатываем индивидуальный дизайн ...
-								</div>
-							</a>
-						</div>
-					</div>
-					<div>
-						<div class="cat">
-							<a href="#" class="cat__link">
-								<p class="cat__title">Платки</p>
-								<div class="cat__pic">
-									<img src="/images/cat-2.png" alt="" />
-								</div>
-								<div class="cat__desc">
-									Для нанесения дизайна на шейные платки и шарфики мы используем технологию матричной печати ...
-								</div>
-							</a>
-						</div>
-					</div>
-					<div>
-						<div class="cat">
-							<a href="#" class="cat__link">
-								<p class="cat__title">Сорочки и блузки</p>
-								<div class="cat__pic">
-									<img src="/images/cat-3.png" alt="" />
-								</div>
-								<div class="cat__desc">
-									Сорочки и блузки изготавливаются  из натуральных хлопковых тканей производства Малайзии ...
-								</div>
-							</a>
-						</div>
-					</div>
-					<div>
-						<div class="cat">
-							<a href="#" class="cat__link">
-								<p class="cat__title">Костюмы</p>
-								<div class="cat__pic">
-									<img src="/images/cat-4.png" alt="" />
-								</div>
-								<div class="cat__desc">
-									Мы отшиваем классические костюмы разных моделей, размеров, пошив высокого качества. На костюмы ...
-								</div>
-							</a>
-						</div>
-					</div>
-					<div>
-						<div class="cat">
-							<a href="#" class="cat__link">
-								<p class="cat__title">Сорочки и блузки</p>
-								<div class="cat__pic">
-									<img src="/images/cat-3.png" alt="" />
-								</div>
-								<div class="cat__desc">
-									Сорочки и блузки изготавливаются  из натуральных хлопковых тканей производства Малайзии ...
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>			
+			
+			<div class="main">	
+				<!-- TemplateBeginEditable name="EditRegion3" -->
+				<h1 class="title"></h1>
+				<div class="text">
+				</div>
+				<!-- TemplateEndEditable -->
 			</div>
-			<div class="catscarousel-nav">
-				<div class="container"></div>
-			</div>
-		</div>
-		<!-- =/cat carousel -->
-
-		<div class="container">
-			<!-- =slogan -->
-			<div id="slogans">
-				<div>
-					<p>ПРОИЗВОДСТВО И РЕАЛИЗАЦИЯ <br> КОРПОРАТИВНОЙ ОДЕЖДЫ <br> НА ЗАКАЗ </p>
-				</div>
-				<div>
-					<p>ПРОИЗВОДСТВО И РЕАЛИЗАЦИЯ <br> КОРПОРАТИВНОЙ ОДЕЖДЫ <br> НА ЗАКАЗ </p>
-				</div>
-			</div>
-			<!-- =/slogan -->
-
-
-			<!-- =info -->
-			<div class="info flexbox">
-				<div class="cell intro">
-					<p class="intro__title">Что еще ?</p>
-					<div class="intro__text">
-						<p>Мы предлагаем полный спектр услуг по изготовлению корпоративной спецодежды на заказ: разработку эскизов, пошив; изготовление фирменных рубашек, блуз; производство брендированных головных уборов ...</p>					
-					</div>
-					<a href="#" class="intro__link">подробнее</a>
-				</div>
-				<div class="cell cats">
-					<ul>
-						<li><a href="#" title=""><span>Шелкография</span></a></li>
-						<li><a href="#" title=""><span>Тиснение</span></a></li>
-						<li><a href="#" title=""><span>Вышивка</span></a></li>
-						<li><a href="#" title=""><span>Униформа для персонала</span></a></li>
-						<li><a href="#" title=""><span>Футболки</span></a></li>
-						<li><a href="#" title=""><span>Корпоративные костюмы</span></a></li>
-						<li><a href="#" title=""><span>Сумки с логотипом</span></a></li>
-					</ul>
-				</div>
-				<div class="cell cats">
-					<ul>
-						<li><a href="#" title=""><span>Галстуки</span></a></li>
-						<li><a href="#" title=""><span>Платки</span></a></li>
-						<li><a href="#" title=""><span>Сорочки и блузки</span></a></li>
-						<li><a href="#" title=""><span>Костюмы</span></a></li>
-						<li><a href="#" title=""><span>Трикотаж</span></a></li>
-						<li><a href="#" title=""><span>Шапки и шарфы</span></a></li>
-						<li><a href="#" title=""><span>Футболки и рубашки поло</span></a></li>
-					</ul>
-				</div>
-				<div class="cell review">
-					<blockquote>
-						<p>ООО Банк “Развитие” выражает искренею благодарность всем сотрудникам ООО Симаста принимавшим активное участие в разработке корпоративной одежды для сотрудников банка.</p>					
-					</blockquote>
-					<p class="more"><a href="#">отзывы наших клиентов</a></p>
-				</div>
-			</div>
-			<!-- =/info -->
-
-
-			<!-- =news-clients -->
-			<div class="info flexbox">
-				<!-- =news -->
-				<div class="news flexbox">
-					<div class="new">
-						<a href="#" title="" class="new__link">
-							<div class="new__meta">
-								<div class="month">Ноябрь</div>
-								<div class="date">10</div>
-							</div>
-							<div class="new__title">Произведения оренбургских художников.</div>
-							<div class="new__desc">Предшествуя встрече Папы Римского Франциска и президента Италии Джорджо</div>
-							<div class="new__more">подробнее</div>
-						</a>
-					</div>
-					<div class="new">
-						<a href="#" title="" class="new__link">
-							<div class="new__meta">
-								<div class="month">Ноябрь</div>
-								<div class="date">8</div>
-							</div>
-							<div class="new__title">Галстуки и запонки: мода, тенденции, правила выбора.</div>
-							<div class="new__desc">Угнаться за модой очень сложно. Она меняется так быстро, что дизайнеры порой</div>
-							<div class="new__more">подробнее</div>
-						</a>
-					</div>
-					<div class="new">
-						<a href="#" title="" class="new__link">
-							<div class="new__meta">
-								<div class="month">Ноябрь</div>
-								<div class="date">6</div>
-							</div>
-							<div class="new__title">Как сохранить опрятный вид костюма</div>
-							<div class="new__desc">У современных бизнесменов и представителей компаний жизнь идет быстрым темпом.</div>
-							<div class="new__more">подробнее</div>
-						</a>
-					</div>				
-				</div>
-				<!-- =/news -->
-				<div class="clients">
-					<div class="flexbox">
-						<a href="#" title=""><img src="tmp/simfony.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/dengi.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/centro.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/terem.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/bereza.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/rasvitie.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/haski.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/fd.png" alt="" /></a>
-						<a href="#" title=""><img src="tmp/miel.png" alt="" /></a>
-					</div>
-					<div class="more"><a href="#">наши клиенты</a></div>
-				</div>
-			</div>
-			<!-- =/news-clients -->
 		</div>
 	</div>
 
@@ -401,7 +224,7 @@
 
 <div class="md-overlay"></div>
 <div id="outdated"></div>
-<link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
+<link rel="stylesheet" property="stylesheet" href="../outdatedbrowser/outdatedbrowser.min.css" />
 <script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
 
 
@@ -414,7 +237,7 @@
 
 
 <script src="/template/js/owl.carousel.min.js"></script>
-<link rel="stylesheet" property="stylesheet" href="template/css/owl.carousel.css">
+<link rel="stylesheet" property="stylesheet" href="../template/css/owl.carousel.css">
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 <script src="/template/js/engine.js"></script>
