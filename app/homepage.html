@@ -104,7 +104,7 @@
 				<div class="contacts">
 					<div class="contacts__link">
 						<div>
-							<span>связаться с нами</span> - <a href="#" class="call">заказать звонок</a>
+							<span>связаться с нами</span> - <a href="#" class="call md-trigger" data-modal="callback">заказать звонок</a>
 						</div>
 						<p>
 							<a href="tel:+74951201305" class="tel">+7 (495) 120-130-5</a>
@@ -142,7 +142,6 @@
 							<p class="cat__title">Платки</p>
 							<div class="cat__pic">
 								<img src="/images/cat-2.png" alt="" />
-								<img src="/images/cat-2-hover.png" alt="" class="hover" />
 							</div>
 							<div class="cat__desc">
 								Для нанесения дизайна на шейные платки и шарфики мы используем технологию матричной печати ...
@@ -370,9 +369,47 @@
 </div>
 
 
+<!-- =modal callback -->
+<div class="md-modal md-effect-9" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="md-content modal-dialog" role="document">
+		<div class="container">
+			<div class="modal__body">
+				<form action="#" method="post" class="form-policy" id="callback-form">
+					<fieldset>
+						<label for="cbname" class="visually-hidden">как вас зовут</label>
+						<input type="text" id="cbname" name="name" class="form-control required" required="required" value="" placeholder="как вас зовут" tabindex="0" autofocus />
+
+						<label for="cbtel" class="visually-hidden">телефон</label>
+						<input type="tel" id="cbtel" name="tel" class="form-control tel required" required="required" value="" placeholder="телефон" tabindex="1" />
+
+						<div class="policy">
+							<input type="checkbox" id="cbcheckbox" value="" name="checkbox" checked="checked" class="user-access">
+							<label for="cbcheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+						</div>
+						<button type="submit" class="submit btn" tabindex="2"><span>перезвонить мне</span></button>
+					</fieldset>
+				</form>
+			</div>
+			<button type="button" data-dismiss="modal" class="md-close close" aria-label="Закрыть"></button>
+		</div>
+	</div>
+</div>
+<!-- =/modal callback -->
+
+
+<div class="md-overlay"></div>
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
 <script src="/outdatedbrowser/outdatedbrowser.min.js"></script>
+
+
+<script src="/template/js/classie.js"></script>
+<script src="/template/js/modalEffects.js"></script>
+
+<script src="/template/js/inputmask/inputmask.min.js"></script>
+<script src="/template/js/inputmask/inputmask.phone.extensions.min.js"></script>
+<script src="/template/js/inputmask/jquery.inputmask.min.js"></script>
+
 
 <script src="/template/js/owl.carousel.min.js"></script>
 <link rel="stylesheet" property="stylesheet" href="template/css/owl.carousel.css">

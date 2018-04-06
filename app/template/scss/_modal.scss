@@ -1,0 +1,255 @@
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and stuff
+
+
+// Kill the scroll on the body
+.modal-open {
+	padding-right: 17px;
+  overflow: hidden;
+  .outerwrapper{
+  	filter: blur(3px);
+  }
+  .inner{
+  	filter: blur(6px)
+  }
+}
+
+.md-modal{
+	.submit{
+		@include gradient-vertical(#df6576, #b10213);
+		border-radius: 5px;
+		border: none;
+		color: $color2;
+		cursor: pointer;
+		display: block;
+		font-style: italic;
+		margin: 2.2rem auto 0;
+		position: relative;
+		text-align: center;
+		width: 300px;
+		height: 30px;
+		&:after{
+			@extend .before;
+			@include gradient-vertical(#b10213, #df6576);
+			border-radius: 5px;
+			display: block;
+			height: 100%;
+			width: 300px;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			transition: .3s opacity;
+		}
+		span{
+			position: relative;
+			z-index: 2;
+		}
+
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+// Container that the modal scrolls within
+.modal,
+.md-modal1 {
+	padding-right: 0 !important;
+	position: fixed;
+	top: 16%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2000;
+	// display: none;
+	overflow: hidden;
+	outline: 0;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+  // When fading in the modal, animate it to slide down
+  &.fade .modal-dialog {
+  	// transition: transform .3s ease-out,-webkit-transform .3s ease-out;
+    // transform: translate(0, -25%);
+  }
+  &.show .modal-dialog { transform: translate(0, 0); }
+}
+.modal-open .modal,
+.modal-open .md-modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+	background-color: #cecece;
+	position: relative;
+	width: auto;
+	top: 0;
+	margin-top: 35px;
+	padding-top: 1.3rem;
+	padding-bottom: 1.5rem;
+	.container{
+		position: relative;
+	}
+
+	.close-modal{
+		top: -55px;
+	}
+
+	.thank{
+		// @extend .bi;
+		text-transform: uppercase;
+		padding: 110px 0 120px;
+		font-size: 20px;
+	}
+}
+
+// Actual modal
+.modal-content {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	outline: 0;
+}
+
+// Modal background
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1071;
+	background-color: #000;
+
+	// Fade for backdrop
+	&.fade { opacity: 0; }
+	&.show { opacity: .5 !important }
+}
+
+
+
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  flex: 1 1 auto;
+}
+
+
+// Measure scrollbar width for padding body during modal show/hide
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.close-modal{
+	background-color: #d92525;
+	border-radius: 16px;
+	border: none;
+	cursor: pointer;
+	height: 32px;
+	position: absolute;
+	left: 50%;
+	margin-left: -23px;
+	text-align: center;
+	width: 46px;
+	z-index: 99;
+	img{
+		margin-top: 2px;
+		vertical-align: top;
+		transition: transform .2s;
+	}
+	&:hover{
+		span{
+			text-decoration: underline;
+		}
+		img{
+			transform: rotate(90deg);
+		}
+	}
+	span{
+		color: $color4;
+	}
+}
+
+form{
+	.thank{
+		color: $color3;
+		// background-color: $color2;
+		font-size: 18px;
+		padding: 90px 0 100px;
+	}
+}
+
+
+
+#feedback{
+	.thank{
+		padding: 120px 0 155px;
+	}
+}
+
+
+.close{
+	background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAMAAAD+iNU2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABdFBMVEX////1DgD1DgD1DgD1DgD1DwD0DgD1DgD0DgD0DgD1DgD0DgD1DgD1DwD1DwD1DgD1DgD1DwD0DgD1DgD0DgD1DwD1DgD1DwD1DwD0DgD1DwD1DgD1DwD1DwD1DgD1DgD1DgD1DwD0DgD0DgD1DwD0DgD1DwD1DgD1DwD0DgD0DgD1DgD0DgD1DgD1DwD1DwD1DwD1DwD0DgD1DwD1DwD0DgD1DwD1DwD0DgD0DgD1DwD1DwD1DgD1DgD1DgD0DgD1DgD1DgD1DgD1DwD0DgD1DwD0DgD0DgD0DgD1DwD1DwD1DwD0DgD1DgD0DgD1DwD1DgD1DwD0DgD1DwD1DgD1DgD1DwD0DgD1DwD1DgD0DgD0DgD1DgD1DwD1DwD1DgD1DgD0DgD0DgD0DgD1DgD1DgD0DgD1DwD1DwD0DgD1DgD0DgD0DgD1DwD0DgD1DwD0DgD0DgD0DgD1DgD0DgD1DwD0DgD0DgD1DwD0DgD1DgD///843smwAAAAeHRSTlMAAQQaBgsJCFacTQIMSI01AwFk09JSCg1O0fSeOGf7wD0QVNhQBSqfxVNg3bAyAjSm+tXjJgMin+/6kiOtHBJw/awlGH33/aQyAyeF/PiPwPn2mRkCFHj0dUHI9qYgFKL87nEUDVTT2kI8neVsE03M1HMRMUUOWxZKFzruAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IEBgsFFsJFR8AAAADYSURBVAjXVY7VWkIBEIQHUWwRC2wsUCwUGxUbLMIuwBbsdnaf3nOEG+div/kvZmYBwIJ/KrAW5kyRzbzFJaVl5aapqKyyV8NRU8u6+gbA6Wpsam6BrbVN2O5GR2cXVbvR4/EKpbfP16+qA4PA0LB/hDoaUIp3bNwsmpic0mkKZ4L5ZVdAjOzsXP6B+dCCkFxcyuHyyiq5psJwZN3Ajc0tcjsai0tiZ3cP+wdG9vAoeHxCnp4lkUqf68XlFa5vbpV3GSB7//D4ZPY8v7y+vQOOj88/xNe37we/6Fwyf3sLGWQAAAAASUVORK5CYII=") no-repeat center;
+	background-color: #cdcdcd;
+	border-radius: 30px;
+	border: none;
+	height: 30px;
+	left: 50%;
+	margin-left: -23px;
+	position: absolute;
+	top: -36px;
+	width: 46px;
+}
+
+
+
+#callback{
+	form{
+		// background-color: $color2;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+		.form-control{
+			background: #e6e6e6;
+			font-size: 1.4rem;	
+
+			$color: #808080;
+			color: $color;
+			flex-grow: 1;
+			margin-bottom: 1.7rem;
+			text-align: center;
+			width: 100%;
+			height: 38px;
+			@include placeholder($color);
+			border-radius: 5px;
+			height: 3rem;
+			border-color: #e6e6e6;
+		}
+
+		.policy{
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+
+.submit:disabled{
+	cursor: default !important;
+	background-color: #ccc !important;
+}
+

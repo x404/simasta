@@ -56,6 +56,9 @@ $(document).ready(function(){
 	// });
 
 
+	$('.tel').inputmask("+7(999)999-99-99");
+
+
 	$('#totop').click(function (){
 		$("body,html").animate({
 			scrollTop:0
@@ -114,3 +117,73 @@ addLoadEvent(function(){
 	})
 });
 // =/заглушка для IE
+
+
+
+$(function(){
+	$('.policy input').click(function(){
+		var $this = $(this),
+			$submit = $this.closest('.form-policy');
+
+		if ($this.is(':checked')){
+			$submit.removeClass('disabled');
+			$submit.find('.input, .form-control, .submit, textarea, input[type=radio]').removeAttr('disabled');
+		} else {
+			$submit.addClass('disabled');
+			$submit.find('.input, .form-control, .submit, textarea, input[type=radio]').attr('disabled', true);
+		}
+	})
+});
+
+
+var timer,
+	sec = 3;
+
+
+function showTime(sendform){
+	sec = sec-1;
+	if (sec <=0) {
+		stopClock();
+
+		switch (sendform){
+			case 'qorder-form':
+				$('.qorder__box .thank').fadeOut('normal',function(){
+					$('.qorder__box .thank').remove();
+					$('.qorder__box .form-control, .qorder__box textarea').val('');
+				});
+				break;
+			case 'feedback-form':
+				$('.feedback .thank').fadeOut('normal',function(){
+					$('.feedback .thank').remove();
+					$('.feedback .form-control, .feedback textarea').val('');
+					$('.feedback__form fieldset').show();
+				});
+				break;
+			case 'cart-form':
+				$('.cart .thank').fadeOut('normal',function(){
+					$('.cart .thank').remove();
+					// $('.cart .form-control, .cart textarea').val('');
+					// $('.cart__form fieldset').show();
+				});
+				break;	
+			default:
+			console.log(sendform);
+				modal = $("#" + sendform);
+				modal.fadeOut('normal',function(){
+					modal.find('.md-close').trigger('click');
+				});
+				break;
+		}
+	}
+}
+
+function stopClock(){
+	window.clearInterval(timer);
+	timer = null;
+	sec = 3;
+}
+
+function startClock(sendform){
+	if (!timer)
+		timer = window.setInterval("showTime('" + sendform + "')",1000);
+}

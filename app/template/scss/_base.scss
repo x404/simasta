@@ -85,7 +85,7 @@ input::-moz-focus-inner{
 
 /*** standart classes *****/
 p{}
-a{color:#020000; transition: .3s;}
+a{color:#f50e00; transition: .3s;}
 h1{font-size:2.5rem}
 h2{font-size:2.4rem}
 h3{font-size:1.6rem}
@@ -115,9 +115,11 @@ h3{font-size:1.6rem}
 
 
 .form-control {
-   border: 1px solid $color3;
-   border-radius: 0;
-	font-size: 16px;
+	font-family: "SegoeUI";
+	border: 1px solid $color3;
+	border-radius: 0;
+	font-size: 1.4rem;
+	font-style: italic;
 	&:focus,
 	&:active{
 		border-color: $color5;
@@ -458,7 +460,7 @@ h3{font-size:1.6rem}
 		z-index: 2;
 	}
 	&:before{
-		@extend .before;
+		@extend .before; 
 		height: 100%;
 		width: 100%;
 		background: $color9;
@@ -481,4 +483,81 @@ h3{font-size:1.6rem}
 
 .text-right{
 	text-align: right;
+}
+
+
+
+.visually-hidden{
+	clip: rect(0 0 0 0);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+
+
+// forms
+
+.policy{
+	color: $color3;
+	text-align: left;
+	a{
+		@extend .tdn;
+	}
+}
+
+
+
+.user-access + label {
+	cursor: pointer;
+	font-size: 14px;
+	font-style: italic;
+}
+
+.user-access:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+.user-access:not(checked) + label {
+	color: #808080;
+	display: block;
+	position: relative; /* будем позиционировать псевдочекбокс относительно label */
+	padding: 3px 0 0 40px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.user-access:not(checked) + label:before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 1px;
+	width: 30px;
+	height: 30px;
+	background-color: #e6e6e6;
+	border: 1px solid #e6e6e6;
+	border-radius: 3px;
+	text-align: center;
+}
+
+/* Меняем фон чекбокса, когда он включен. */
+.user-access:checked + label:before {
+	// border-color: $color4;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.user-access:checked + label:after {
+	content: '*';
+	position: absolute;
+	top: -6px;
+	left: 6px;
+	width: 22px;
+	height: 22px;
+	font-size: 36px;
+}
+
+
+.sending{
+	text-align: center;
+	font-size: 17px;
+	height: 207px;
+	padding-top: 80px;
 }
