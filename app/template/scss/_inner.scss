@@ -1,0 +1,72 @@
+.listClients{
+	flex-wrap: wrap;
+	margin-bottom: -2rem;
+	a{
+		border: 1px solid rgba(255,255,255,0);
+		flex-basis: calc(20% - 25px);
+		height: 184px;
+		margin-bottom: 2.5rem;
+		margin-right: 2.5rem;
+		text-align: center;
+		&:hover{
+			border-color: $color4;
+		}
+	}
+}
+
+
+.text{
+	margin: 2.5rem 0;
+	&-lineboth{
+		position: relative;
+		padding: .5rem 0 1rem;
+		&:before,
+		&:after{
+			@extend .before;
+			background-image: linear-gradient(to right, #b5b5b5 0, #b5b5b5 50%, #fefefe 100%);
+			height: 1px;
+			left: 0;
+			width: 100%;
+		}
+		&:before{
+			top: 0;
+		}
+		&:after{
+			bottom: 0;
+		}
+	}
+}
+
+.main{
+	margin-top: 4.5rem;
+	.title{
+		font-family: 'CenturyGothic';
+		color: $color2;
+		font-style: italic;
+		font-weight: normal;
+		span{
+			background: $color1;
+			font-size: 3.3rem;	
+			padding: 0 1.6rem; 		
+		}
+	}
+}
+
+main{
+	p{
+		margin: 2rem 0;
+	}
+
+	ul{
+		margin: 2rem 0 2rem 0;
+		list-style: none;
+		li{
+			margin: .4rem 0;
+			position: relative;
+			&:before{
+				 text-indent: -5px;
+				 content: "- ";
+			}
+		}
+	}	
+}

@@ -80,7 +80,27 @@
 										</div>
 									</li>
 									<li><a href="../services.html">Услуги</a></li>
-									<li><a href="../works.html">Наши работы</a></li>
+									<li class="folder">
+										<a href="../works.html">Наши работы</a>
+										<div class="subnav">
+											<ul>
+												<li><a href="#" title="">Галстуки</a></li>
+												<li><a href="#" title="">Платки</a></li>
+												<li><a href="#" title="">Сорочки и блузки</a></li>
+												<li><a href="#" title="">Костюмы</a></li>
+												<li><a href="#" title="">Трикотаж</a></li>
+												<li><a href="#" title="">Шапки и шарфы</a></li>
+												<li><a href="#" title="">Бейсболки</a></li>
+												<li><a href="#" title="">Футболки и рубашки поло</a></li>
+												<li><a href="#" title="">Зажимы и запонки</a></li>
+												<li><a href="#" title="">Толстовки</a></li>
+												<li><a href="#" title="">Упаковка</a></li>
+												<li><a href="#" title="">Спецодежда</a></li>
+												<li><a href="#" title="">Промо продукция</a></li>
+												<li><a href="#" title="">Корпоративные подарки</a></li>
+											</ul>
+										</div>
+									</li>
 									<li><a href="#">Готовая продукция</a></li>
 									<li><a href="../contacts.html">Контакты</a></li>
 								</ul>
