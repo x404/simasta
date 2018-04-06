@@ -8,6 +8,7 @@
 		margin-bottom: 2.5rem;
 		margin-right: 2.5rem;
 		text-align: center;
+		@extend .flex-center;
 		&:hover{
 			border-color: $color4;
 		}
@@ -19,7 +20,7 @@
 	margin: 2.5rem 0;
 	&-lineboth{
 		position: relative;
-		padding: .5rem 0 1rem;
+		padding: 2rem 0 1rem;
 		&:before,
 		&:after{
 			@extend .before;
@@ -54,8 +55,17 @@
 }
 
 main{
-	p{
+	h2{
 		margin: 2rem 0;
+	}
+	margin-bottom: 3rem;
+	a{
+		@extend .tdn;
+	}
+	p{
+		// margin: 2rem 0;
+		line-height: 1.5;
+		margin: 0;
 	}
 
 	ul{
@@ -131,7 +141,16 @@ main{
 			color: $color3;
 		}
 	}
-
+	.neighbors{
+		a{
+			color: $color15;
+		}
+	}
 }
 /* =/pagination
 ---------------------------*/
+
+
+.share{
+	margin-top: 2.5rem;
+}
