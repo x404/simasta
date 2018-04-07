@@ -173,14 +173,14 @@ h3 {
   .tdn:hover, .footer__contacts a:hover, .footer__menu ul li a:hover, .info .intro__link:hover, .info .clients .more a:hover, main a:hover, .pagination a:hover, .policy a:hover {
     text-decoration: underline; }
 
-.tdu, .header .contacts .call {
+.tdu, .header .contacts .call, .page-error .box a {
   text-decoration: underline; }
-  .tdu:hover, .header .contacts .call:hover {
+  .tdu:hover, .header .contacts .call:hover, .page-error .box a:hover {
     text-decoration: none; }
 
 .before, .footer__menu ul li a:before, .line-animate:before, .info .cats a:before, .info .review blockquote:before, .info .review blockquote:after, .text-lineboth:before, .text-lineboth:after, .gallery a:after, .gallery a:before, .btn:after, .feedback:after, .feedback:before,
 .order:after,
-.order:before, .service__pic:after, .service__title span:before, .service__title span:after {
+.order:before, .service__pic:after, .service__title span:before, .service__title span:after, .page-error .box:before {
   content: "";
   display: block;
   position: absolute; }
@@ -2133,6 +2133,72 @@ tbody.collapse.show {
     padding: 1rem .3rem; }
     .service__text p {
       line-height: 1.3; }
+
+.page-error {
+  background: url(../images/bg.jpg) no-repeat center 40px;
+  min-height: 100vh;
+  position: relative; }
+  .page-error:before {
+    top: auto;
+    bottom: -10px; }
+  .page-error .main {
+    min-height: 430px;
+    position: relative; }
+  .page-error .num {
+    font-size: 170px;
+    color: red;
+    font-weight: bold; }
+  .page-error .error {
+    margin-left: 10px;
+    padding-top: 25px; }
+    .page-error .error p {
+      margin: 0; }
+    .page-error .error .num {
+      line-height: 1; }
+    .page-error .error__title {
+      background-color: #000;
+      color: #fff;
+      font-family: 'CenturyGothic';
+      font-size: 3.6rem;
+      font-style: italic;
+      line-height: 1;
+      margin: 0;
+      padding: 0.5rem 0 0.4rem;
+      text-align: center;
+      width: 300px; }
+  .page-error .box {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    font-family: 'CenturyGothic';
+    line-height: 1.7;
+    margin-top: 1.5rem;
+    padding: 2rem 1.5rem;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    left: 390px;
+    width: 230px; }
+    .page-error .box a {
+      color: #f2f2f2; }
+    .page-error .box:before {
+      width: 15px;
+      height: 14px; }
+    .page-error .box-red {
+      background-color: rgba(255, 0, 0, 0.5);
+      color: #fff;
+      left: 325px;
+      top: 195px; }
+    .page-error .box-arrow_top:before {
+      background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAS1BMVEX/////AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD///++AEuPAAAAGHRSTlMABCVbHW8BgEQXaj4DfxFlOH4MXzJ9CFkv6sa9AAAAAWJLR0QAiAUdSAAAAAd0SU1FB+IEBxcBDPbLRs8AAABBSURBVAjXVcdbDkAwFEXRKnpQWm/zn2njJqR7/S3nao1n247tA6qB1chOrOLf+e2SUGVWK7vtqA5WJ3vd9q96rAXkwgL2ofBkZQAAAABJRU5ErkJggg==") no-repeat left top;
+      top: -14px;
+      right: 16px; }
+    .page-error .box-arrow_bottom:before {
+      background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBAcWOy4HwLNlAAAAaklEQVQY02P4v+0/Otj4nwEGGf6zYSj4+V8AIY1NQTKyNKaCvajS6Ar+/JdAlUZXkI8ujargJKY0soJ//5UwpRn+s8MVVGOTRii4gl0aoUAXuzRMQTsuaYiCe/8ZcUlDFFgy/mfACdgZnAHcwRr8bFve8gAAAABJRU5ErkJggg==") no-repeat right top;
+      bottom: -14px;
+      right: 16px; }
+  .page-error .footer__bottom,
+  .page-error .copyright {
+    background-color: rgba(255, 255, 255, 0.45); }
 
 /* =mobile-menu
 ---------------------------*/

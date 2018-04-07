@@ -98,6 +98,35 @@ $(document).ready(function(){
 	});
 
 
+	$('#feedback-form').validate({
+		rules: {
+			name:{required : true},
+			tel: {validphone:true}
+		},
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$(form).closest('.modal__body').html(thankcallback);
+					startClock('feedback');
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
 	// форма обратной связи
 	$('#order-form').validate({
 		rules: {
