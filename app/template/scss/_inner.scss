@@ -1,3 +1,26 @@
+.breadcrumbs{
+	@extend .flex-cv;
+	text-transform: lowercase;
+	ul{
+		li{
+			color: $color17;
+			display: inline-block;
+			margin: 0 2px;
+			a{
+				color: $color6;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+			.B_currentCrumb{
+				color: #f50e00;				
+			}
+		}
+	}
+}
+
+
+
 .listClients{
 	flex-wrap: wrap;
 	margin-bottom: -2rem;

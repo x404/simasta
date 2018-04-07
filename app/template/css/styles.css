@@ -143,7 +143,7 @@ input::-moz-focus-inner {
 .flexbox {
   display: flex; }
 
-.flex-cv, .footer .logo, .footer .social a {
+.flex-cv, .footer .logo, .footer .social a, .breadcrumbs {
   display: flex;
   align-items: center; }
 
@@ -1528,6 +1528,19 @@ form .thank {
 .submit:disabled {
   cursor: default !important;
   background-color: #ccc !important; }
+
+.breadcrumbs {
+  text-transform: lowercase; }
+  .breadcrumbs ul li {
+    color: #c1c1c1;
+    display: inline-block;
+    margin: 0 2px; }
+    .breadcrumbs ul li a {
+      color: #818181; }
+      .breadcrumbs ul li a:hover {
+        text-decoration: none; }
+    .breadcrumbs ul li .B_currentCrumb {
+      color: #f50e00; }
 
 .listClients {
   flex-wrap: wrap;

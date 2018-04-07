@@ -39,6 +39,17 @@
 		<div class="top">
 			<div class="container">
 				<div class="flexbox">
+					<div class="breadcrumbs">
+						<ul class="B_crumbBox">
+							<li>
+								<a href="/">Главная</a>
+							</li>
+							<li> - </li>
+							<!-- TemplateBeginEditable name="EditRegion6" -->
+												
+							<!-- TemplateEndEditable -->	
+						</ul>						
+					</div>			
 					<div class="qsearch">
 						<form class="sisea-search-form" action="#" method="get">
 							<fieldset>
