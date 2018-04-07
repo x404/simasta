@@ -1574,6 +1574,11 @@ form .thank {
       background: #000;
       font-size: 3.3rem;
       padding: 0 1.6rem; }
+  .main h2 {
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: normal;
+    font-family: 'CenturyGothic'; }
 
 main {
   margin-bottom: 3rem; }
@@ -1587,10 +1592,20 @@ main {
     list-style: none; }
     main ul li {
       margin: .4rem 0;
+      margin-left: .5rem;
+      padding-left: .5rem;
       position: relative; }
       main ul li:before {
+        position: absolute;
+        left: 0;
+        top: 0;
         text-indent: -5px;
         content: "- "; }
+  main .gallery {
+    margin-top: 2rem; }
+  main .listService,
+  main .catalog {
+    margin-bottom: -1rem; }
 
 .listNews {
   margin-left: 2rem;

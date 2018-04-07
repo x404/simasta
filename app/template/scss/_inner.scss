@@ -58,6 +58,29 @@
 			padding: 0 1.6rem; 		
 		}
 	}
+	// ul{
+	// 	margin: 2rem 0 2rem 0;
+	// 	list-style: none;
+	// 	li{
+	// 		margin: .4rem 0;
+	// 		padding-left: .5rem;
+	// 		position: relative;
+	// 		&:before{
+	// 			position: absolute;
+	// 			left: 0;
+	// 			top: 0;
+	// 			text-indent: -5px;
+	// 			content: "- ";
+	// 		}
+	// 	}
+	// }
+
+	h2{
+		font-size: 1.8rem;
+		font-style: italic;
+		font-weight: normal;
+		font-family: 'CenturyGothic';
+	}
 }
 
 main{
@@ -69,7 +92,6 @@ main{
 		@extend .tdn;
 	}
 	p{
-		// margin: 2rem 0;
 		line-height: 1.5;
 		margin: 0;
 	}
@@ -79,13 +101,27 @@ main{
 		list-style: none;
 		li{
 			margin: .4rem 0;
+			margin-left: .5rem;
+			padding-left: .5rem;
 			position: relative;
 			&:before{
-				 text-indent: -5px;
-				 content: "- ";
+				position: absolute;
+				left: 0;
+				top: 0;
+				text-indent: -5px;
+				content: "- ";
 			}
 		}
-	}	
+	}
+
+	.gallery{
+		margin-top: 2rem;
+	}
+
+	.listService,
+	.catalog{
+		margin-bottom: -1rem;
+	}
 }
 
 
