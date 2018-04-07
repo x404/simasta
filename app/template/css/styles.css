@@ -2055,6 +2055,8 @@ tbody.collapse.show {
       .service__link:hover .service__pic:after {
         opacity: 1; }
   .service__pic {
+    background: #ccc;
+    min-height: 250px;
     position: relative; }
     .service__pic img {
       vertical-align: top;
@@ -2078,7 +2080,7 @@ tbody.collapse.show {
     text-align: center;
     text-transform: uppercase;
     top: 0;
-    width: 100%; }
+    width: 98%; }
     .service__title span {
       position: relative;
       width: 100%;
