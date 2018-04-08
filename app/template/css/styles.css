@@ -2552,7 +2552,8 @@ tbody.collapse.show {
     margin-bottom: -1rem; }
   .product {
     margin-bottom: 1rem; }
-  .feedback .row input.form-control {
+  .feedback .row input.form-control,
+  #order .row input.form-control {
     min-width: 0;
     width: 30%; }
   .gallery-reviews {
@@ -2669,19 +2670,24 @@ tbody.collapse.show {
 @media (max-width: 650px) {
   #slogans .slick-list {
     font-size: 3.2rem; }
-  .feedback {
+  .feedback,
+  #order {
     margin-left: auto;
     margin-right: auto;
     width: 500px; }
-    .feedback .row {
+    .feedback .row,
+    #order .row {
       display: block; }
       .feedback .row .form-control,
-      .feedback .row textarea {
+      .feedback .row textarea,
+      #order .row .form-control,
+      #order .row textarea {
         display: block;
         margin-bottom: 1rem;
         width: 100% !important;
         text-align: center; }
-      .feedback .row textarea {
+      .feedback .row textarea,
+      #order .row textarea {
         margin-top: -.7rem; } }
 
 @media (max-width: 600px) {
@@ -2701,14 +2707,24 @@ tbody.collapse.show {
       margin-right: 0; }
   .listClients {
     margin-bottom: -2rem; }
-  .feedback {
+  .feedback,
+  #order {
     width: 100%; }
-    .feedback .container {
+    .feedback .container,
+    #order .container {
       padding: 0; }
-    .feedback .btn {
+    .feedback .btn,
+    #order .btn {
       width: 100%; }
-      .feedback .btn:after {
-        display: none; } }
+      .feedback .btn:after,
+      #order .btn:after {
+        display: none; }
+  .production .gallery {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center; }
+  .accordion__title {
+    text-align: left; } }
 
 @media (max-width: 500px) {
   .catscarousel .container {

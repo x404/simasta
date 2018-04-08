@@ -16,7 +16,8 @@
 		margin-bottom: 1rem;
 	}
 
-	.feedback{
+	.feedback,
+	#order{
 		.row{
 			input.form-control{
 				min-width: 0;
@@ -76,10 +77,6 @@
 		position: static;
 	}
 
-
-	.listService{
-
-	}
 }
 
 @media (max-width: 991px){
@@ -222,7 +219,8 @@
 		font-size: 3.2rem;
 	}
 
-	.feedback{
+	.feedback,
+	#order{
 		margin-left: auto;
 		margin-right: auto;
 		width: 500px;
@@ -282,7 +280,8 @@
 	}
 
 
-	.feedback{
+	.feedback,
+	#order{
 		.container{
 			padding: 0;
 		}
@@ -293,6 +292,16 @@
 				display: none;
 			}
 		}
+	}
+
+	.production .gallery{
+		flex-wrap: nowrap;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.accordion__title{
+		text-align: left;
 	}
 }
 

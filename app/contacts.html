@@ -291,6 +291,43 @@
 </div>
 <!-- =/modal callback -->
 
+<!-- InstanceBeginEditable name="EditRegion7" -->
+<!-- =modal order -->
+<div class="md-modal md-effect-9" id="order" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="md-content modal-dialog" role="document">
+		<div class="container">
+			<div class="modal__body">
+				<form action="#" method="post" id="order-form" class="order__form form-policy">
+					<fieldset>
+						<div class="container">
+							<div class="row">
+								<label for="m_name" class="visually-hidden">как вас зовут ?</label>
+								<input name="name" id="m_name" type="text" value="" class="form-control required" required="required" placeholder="как вас зовут ? *">
+								<label for="m_tel" class="visually-hidden">ваш номер телефона</label>
+								<input name="tel" id="m_tel" type="tel" value="" class="form-control required tel" required="required" placeholder="ваш номер телефона *">
+								<label for="m_email" class="visually-hidden">ваш e-mail</label>
+								<input name="email" id="m_email" type="email" value="" class="form-control email" placeholder="ваш e-mail">
+								<input name="title" id="title" type="hidden" value="" />
+							</div>
+							<div class="row">
+								<label for="m_msg" class="visually-hidden">ваше сообщение</label>
+								<textarea name="msg" id="m_msg" cols="30" rows="10" placeholder="ваше сообщение ..."></textarea>
+							</div>
+							<div class="policy">
+								<input type="checkbox" id="checkboxf" value="" name="checkbox" checked="checked" class="user-access">
+								<label for="checkboxf">Я Согласен на обработку персональных данных и принимаю условия <a href="#.pdf" title="" target="_blank">Пользовательского соглашения</a></label>
+							</div>
+							<button type="submit" class="submit btn" tabindex="2"><span>отправить</span></button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<button type="button" data-dismiss="modal" class="md-close close" aria-label="Закрыть"></button>
+		</div>
+	</div>
+</div>
+<!-- =/modal order -->
+<!-- InstanceEndEditable -->
 
 <div class="md-overlay"></div>
 <div id="outdated"></div>
