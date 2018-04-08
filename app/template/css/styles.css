@@ -2554,7 +2554,12 @@ tbody.collapse.show {
     margin-bottom: 1rem; }
   .feedback .row input.form-control {
     min-width: 0;
-    width: 30%; } }
+    width: 30%; }
+  .gallery-reviews {
+    display: block;
+    text-align: center; }
+    .gallery-reviews a {
+      display: inline-block; } }
 
 @media (max-width: 1199px) {
   #slogans .slick-list {
@@ -2621,7 +2626,9 @@ tbody.collapse.show {
   .listService,
   .gallery,
   .catalog {
-    justify-content: center; } }
+    justify-content: center; }
+  .gallery-reviews a {
+    margin-right: .3rem; } }
 
 @media (max-width: 767px) {
   .slogans-container {

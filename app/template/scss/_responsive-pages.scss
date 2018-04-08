@@ -24,6 +24,14 @@
 			}
 		}
 	}
+
+	.gallery-reviews{
+		display: block;
+		text-align: center;
+		a{
+			display: inline-block;
+		}
+	}
 }
 
 @media (max-width: 1199px){
@@ -132,6 +140,12 @@
 	.catalog
 	{
 		justify-content: center;
+	}
+
+	.gallery-reviews{
+		a{
+			margin-right: .3rem;
+		}
 	}
 }
 
