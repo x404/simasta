@@ -117,7 +117,8 @@
 		}
 	}
 
-	.listNews{
+	.listNews,
+	.catalog{
 		margin-left: 0;
 		margin-right: 0;
 		.new{
@@ -127,7 +128,8 @@
 
 	.listClients,
 	.listService,
-	.gallery	
+	.gallery,
+	.catalog
 	{
 		justify-content: center;
 	}
@@ -265,6 +267,7 @@
 		margin-bottom: -2rem;
 	}
 
+
 	.feedback{
 		.container{
 			padding: 0;
@@ -355,6 +358,19 @@
 			}
 		}
 	}
+
+
+	.catalog{
+		justify-content: center;
+	}
+
+	.listService .service,
+	.catalog .cat
+
+	{
+		margin-right: 0;
+	}
+
 
 	.share{
 		text-align: center;

@@ -2610,14 +2610,17 @@ tbody.collapse.show {
       width: 100%; }
       .info .clients .flexbox a {
         width: 20%; }
-  .listNews {
+  .listNews,
+  .catalog {
     margin-left: 0;
     margin-right: 0; }
-    .listNews .new {
+    .listNews .new,
+    .catalog .new {
       margin-right: 2.2rem; }
   .listClients,
   .listService,
-  .gallery {
+  .gallery,
+  .catalog {
     justify-content: center; } }
 
 @media (max-width: 767px) {
@@ -2741,6 +2744,11 @@ tbody.collapse.show {
       width: 100%; }
       .homepage .info .news .new:nth-child(3) {
         display: block; }
+  .catalog {
+    justify-content: center; }
+  .listService .service,
+  .catalog .cat {
+    margin-right: 0; }
   .share {
     text-align: center; }
   .ya-share2__item {
