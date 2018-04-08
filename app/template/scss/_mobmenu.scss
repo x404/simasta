@@ -1,5 +1,5 @@
 $color_1: #fff; 
-$color_2: #0563bf;
+$color_2: $color8;
 
 
 /* =mobile-menu
@@ -69,7 +69,14 @@ $color_2: #0563bf;
 			border-top: 0;
 		}
 
+		.mainnav{
+			font-style: normal;
+			padding-top: 0;			
+		}
+
 		.mainnav__list{
+			text-align: left;
+			display: block;
 			position: fixed;
 			left: 0;
 			right: 0;
@@ -175,7 +182,6 @@ $color_2: #0563bf;
 				&-text{
 					display: none !important;
 				}
-
 			}
 
 			ul{
@@ -205,7 +211,7 @@ $color_2: #0563bf;
 				}
 			}
 			& > li.active > a{
-				text-decoration: underline;				
+				text-decoration: underline;
 			}
 			li{ // 1 level
 				padding: 0;
@@ -216,6 +222,7 @@ $color_2: #0563bf;
 					height: auto;
 					line-height: normal;
 					padding: 18px 0 18px 10px;
+					border-bottom: none;
 					text-decoration: none;
 					text-transform: none;
 					&:hover{
@@ -263,17 +270,13 @@ $color_2: #0563bf;
 				}
 
 				&.active{
+					span{
+						text-decoration: underline;
+					}
 					a{
+						text-decoration: underline;
 						&:hover{
 							color : #fff;
-						}
-					}
-
-					& > ul{
-						display: block;
-						.active .active a{
-							font-weight: bold;
-							text-decoration: underline;
 						}
 					}
 				}
@@ -294,28 +297,6 @@ $color_2: #0563bf;
 						&:hover{
 							border-bottom: none;
 							color:$color_2;
-						}
-
-						ul{ // 2level
-							padding-top: 0;
-							li{
-								padding-right: 0;
-								&:hover{
-									background: none;
-								}
-								&.folder.active > a{
-									text-decoration: underline;
-								}
-								ul{
-									li{
-										&.active{
-											a{
-												text-decoration: underline;
-											}
-										}
-									}
-								}
-							}
 						}
 					}
 				}

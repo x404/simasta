@@ -6,7 +6,45 @@ $(document).ready(function(){
 		prevArrow : '<button type="button" class="slick-prev" aria-label="Назад"></button>',
 		nextArrow: '<button class="slick-next" aria-label="Вперед" type="button"></button>',
 		autoplay: true,
-		autoplaySpeed: 2000
+		autoplaySpeed: 2000,
+		responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+			    slidesToShow: 3
+			  }
+			},
+			{
+			  breakpoint: 730,
+			  settings: {
+			    slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 500,
+			  settings: {
+			    slidesToShow: 1,
+			    centerMode: true,
+			    centerPadding: '90px'
+			  }
+			},
+			{
+			  breakpoint: 450,
+			  settings: {
+			    slidesToShow: 1,
+			    centerMode: true,
+			    centerPadding: '65px'
+			  }
+			},
+			{
+			  breakpoint: 450,
+			  settings: {
+			    slidesToShow: 1,
+			    centerMode: true,
+			    centerPadding: '35px'
+			  }
+			}
+		]
 	});
 
 
@@ -176,7 +214,7 @@ $(document).ready(function(){
 
 	// mobile-menu
 	$('#navbar').each(function(){
-		var $this = $(this),
+		let $this = $(this),
 			$link = $('.navbar-toggle'),
 			$close = $('.close-menu'),
 
@@ -186,10 +224,7 @@ $(document).ready(function(){
 			},
 			openMenu = function(e){
 				e.preventDefault();
-				h = $(document).height();
 				$('body').addClass('o-menu');
-				$('#navbar').height(h);
-
 			},
 			closeMenu = function(e){
 				e.preventDefault();
@@ -198,6 +233,15 @@ $(document).ready(function(){
 			};
 		init();
 	});	
+
+	$(window).resize(function(){
+		if ($('body').width() > 640) {
+			$('body').removeClass('o-menu');
+			$('#navbar').css('height', 'auto');
+		}
+	});
+
+
 });
 
 // =заглушка для IE
@@ -286,3 +330,12 @@ function startClock(sendform){
 	if (!timer)
 		timer = window.setInterval("showTime('" + sendform + "')",1000);
 }
+
+
+
+// показываем второй  уровень меню
+$(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
+	e.preventDefault();
+	var $this = $(this);
+	$this.next('.subnav').slideToggle().prev().toggleClass('open');
+})

@@ -90,8 +90,9 @@ input::-moz-focus-inner{
 	justify-content: center;	
 }
 
-.outerwrapper{
-
+button[type="submit"],
+.submit{
+	cursor: pointer;
 }
 
 /*** standart classes *****/

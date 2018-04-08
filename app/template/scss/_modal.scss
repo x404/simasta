@@ -208,6 +208,9 @@ form{
 			border-radius: 5px;
 			height: 3rem;
 			border-color: #e6e6e6;
+			&:disabled{
+				opacity: .8;
+			}
 		}
 
 		.policy{
@@ -220,5 +223,10 @@ form{
 .submit:disabled{
 	cursor: default !important;
 	background-color: #ccc !important;
+	opacity: .5 !important;
+	filter: grayscale(1);
+	&:after{
+		display: none;
+	}
 }
 

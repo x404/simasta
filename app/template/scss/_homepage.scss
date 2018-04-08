@@ -2,7 +2,7 @@
 	background: url(../images/bg.jpg) no-repeat center 40px;
 	min-height: 985px;
 	.slogan{
-		padding-right: 9rem;
+		padding-right: 55rem;
 	}
 }
 
@@ -92,12 +92,13 @@
 // =slogans
 #slogans{
 	background: rgba(255, 255, 255, .45);
-	font-weight: bold;
-	font-style: italic;
 	color: $color7;
+	font-style: italic;
+	font-weight: bold;
 	line-height: 1.2;
-	padding-top: 4.5rem;
+	min-height: 280px;
 	padding-left: 5.5rem;
+	padding-top: 4.5rem;
 	.slick-list{
 		font-size: 4.8rem;		
 	}

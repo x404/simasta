@@ -116,8 +116,9 @@
 									<li><a href="../contacts.html">Контакты</a></li>
 								</ul>
 								<div class="show-sm">
-									<a href="tel:+123456789">+1234 56-78-89</a>
-									<a href="mailto:info@transliftrus.ru">info@site.site</a>
+									<a href="tel:+74951201305">+7(495)120-13-05</a>
+									<a href="mailto:info@simasta.ru" class="altlink">info@simasta.ru</a>
+									<a href="skype:simasta.ru" class="altlink">skype: simasta.ru</a>
 								</div>
 							</div>
 						</nav>
