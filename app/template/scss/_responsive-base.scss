@@ -61,6 +61,21 @@
 }
 
 
+@media (max-width: 767px){
+	.top .breadcrumbs{
+		display: none;
+	}
+	.breadcrumbs{
+		margin-top: -1rem;
+		margin-bottom: 3rem;
+		ul{
+			font-size: 1.5rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
 @media (max-width: 700px){
 	.footer{
 		.flexbox{
@@ -156,6 +171,15 @@
 			a{
 				margin-bottom: 1rem;
 			}
+		}
+	}
+
+	.pagination{
+		.flexbox{
+			justify-content: center;
+			padding-left: 0;
+			padding-right: 0;
+			width: 100%;
 		}
 	}
 }

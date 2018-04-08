@@ -96,6 +96,14 @@
 			}
 		}
 	}
+
+	.listNews{
+		margin-left: 0;
+		margin-right: 0;
+		.new{
+			margin-right: 2.2rem;
+		}
+	}
 }
 
 
@@ -125,6 +133,12 @@
 			margin: 1rem 0;
 		}
 	}
+
+	.main{
+		.title{
+			text-align: center;
+		}
+	}
 }
 
 
@@ -136,10 +150,10 @@
 
 	.homepage{
 		background-position: center top;
-		.slogan{
-			padding-right: 0;
-			text-align: center;
-		}
+	}
+	.slogan{
+		padding-right: 0;
+		text-align: center;
 	}
 
 	.catscarousel{
@@ -188,11 +202,30 @@
 }
 
 
+@media (max-width: 530px){
+	.listNews{
+		justify-content: space-between;
+		.new{
+			margin-right: 0;
+		}
+	}
+}
+
+
+
 @media (max-width: 500px){
 	.catscarousel{
 		.container{
 			padding-left: 0;
 			padding-right: 0;
+		}
+	}
+
+	.listNews{
+		display: block;
+		.new{
+			margin-left: auto;
+			margin-right: auto 
 		}
 	}
 }
@@ -247,5 +280,9 @@
 		.slick-list{
 			font-size: 2.5rem;
 		}
+	}
+
+	.main .title span{
+		font-size: 2.6rem;
 	}
 }
