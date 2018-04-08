@@ -1811,7 +1811,6 @@ main {
       .feedback__form .row textarea,
       .order__form .row input.form-control,
       .order__form .row textarea {
-        display: none;
         background: #e6e6e6;
         font-size: 1.4rem;
         border: 1px solid #f2f2f2;
@@ -2552,7 +2551,10 @@ tbody.collapse.show {
   .production {
     margin-bottom: -1rem; }
   .product {
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem; }
+  .feedback .row input.form-control {
+    min-width: 0;
+    width: 30%; } }
 
 @media (max-width: 1199px) {
   #slogans .slick-list {
@@ -2613,7 +2615,9 @@ tbody.collapse.show {
     margin-right: 0; }
     .listNews .new {
       margin-right: 2.2rem; }
-  .listClients {
+  .listClients,
+  .listService,
+  .gallery {
     justify-content: center; } }
 
 @media (max-width: 767px) {
@@ -2654,7 +2658,21 @@ tbody.collapse.show {
 
 @media (max-width: 650px) {
   #slogans .slick-list {
-    font-size: 3.2rem; } }
+    font-size: 3.2rem; }
+  .feedback {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px; }
+    .feedback .row {
+      display: block; }
+      .feedback .row .form-control,
+      .feedback .row textarea {
+        display: block;
+        margin-bottom: 1rem;
+        width: 100% !important;
+        text-align: center; }
+      .feedback .row textarea {
+        margin-top: -.7rem; } }
 
 @media (max-width: 600px) {
   .info .clients .flexbox a {
@@ -2672,7 +2690,15 @@ tbody.collapse.show {
     .listNews .new {
       margin-right: 0; }
   .listClients {
-    margin-bottom: -2rem; } }
+    margin-bottom: -2rem; }
+  .feedback {
+    width: 100%; }
+    .feedback .container {
+      padding: 0; }
+    .feedback .btn {
+      width: 100%; }
+      .feedback .btn:after {
+        display: none; } }
 
 @media (max-width: 500px) {
   .catscarousel .container {
@@ -2685,6 +2711,8 @@ tbody.collapse.show {
       margin-right: auto; }
   .gallery {
     display: block; }
+  .main .gallery {
+    display: flex; }
   .product {
     margin-left: auto;
     margin-right: auto; } }
