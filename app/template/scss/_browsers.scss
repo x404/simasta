@@ -15,4 +15,17 @@ _::-webkit-:host:not(:root:root), .header{
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.listClients a{
+		margin-right: 2rem;
+	}
+}
+
+
+
+.ie10{
+	.new{
+		display: inline-block;
+		vertical-align: top;
+		flex-basis: 240px;
+	}
 }

@@ -214,7 +214,7 @@ $(document).ready(function(){
 
 	// mobile-menu
 	$('#navbar').each(function(){
-		let $this = $(this),
+		var $this = $(this),
 			$link = $('.navbar-toggle'),
 			$close = $('.close-menu'),
 

@@ -62,7 +62,6 @@ gulp.task('compress', function(){
 				config.templateDir + '/js/popper.min.js',
 				config.templateDir + '/js/jquery.fancybox.min.js',
 				config.templateDir + '/js/collapse.js'
-				// config.templateDir + '/js/modal.js'
 			]),
 			concat('libs.min.js'), // Собираем их в кучу в новом файле libs.min.js
 			uglify(), // Сжимаем JS файл
@@ -222,7 +221,6 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
 		config.templateDir + '/css/styles.min.css',
 		config.templateDir + '/css/tiny.css',
-		config.templateDir + '/css/owl.carousel.css'
 	])
 	.pipe(gulp.dest(config.destDir + '/template/css'));
 

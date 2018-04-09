@@ -1,7 +1,40 @@
 @media (max-width: 1399px){
+	.listNews,
+	.listService{
+		margin-left: 0;
+		margin-right: 0;
+		.new
+		{
+			margin-right: 1rem;
+			width: 210px;
+		}
+	}
+
+	.listService,
+	.main .gallery{
+		justify-content: center;
+	}
+
 	.info{
 		margin-right: 5rem;
 	}
+
+	.listService-about,
+	.gallery-about{
+		justify-content: flex-start !important;
+	}
+
+
+	.listService-about .service,
+	.catalog-about .cat,
+	.gallery-about a{
+		margin-right: 1rem;
+		width: 212px;
+		&:last-child(){
+			margin-right: 0;
+		}			
+	}
+
 
 
 	.catscarousel-nav,
@@ -79,6 +112,24 @@
 
 }
 
+@media (max-width: 1024px){
+	.listClients,
+	.listService,
+	.gallery,
+	.catalog
+	{
+		justify-content: center;
+	}
+
+	.feedback__form,
+	.order__form
+	{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
 @media (max-width: 991px){
 	.slogans-container{
 		width: 100%;
@@ -131,13 +182,6 @@
 		}
 	}
 
-	.listClients,
-	.listService,
-	.gallery,
-	.catalog
-	{
-		justify-content: center;
-	}
 
 	.gallery-reviews{
 		a{
@@ -146,6 +190,13 @@
 	}
 }
 
+
+@media (max-width: 768px){
+	.feedback__form{
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 
 @media (max-width: 767px){
 	.slogans-container{
@@ -303,6 +354,11 @@
 	.accordion__title{
 		text-align: left;
 	}
+
+	.order__form{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 
@@ -313,6 +369,15 @@
 			padding-left: 0;
 			padding-right: 0;
 		}
+	}
+
+	.slogans-container{
+		padding-left: 0;
+	}
+
+	#slogans{
+		padding-left: 0;
+		margin-left: 0;
 	}
 
 	.listNews{
