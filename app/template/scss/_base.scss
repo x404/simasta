@@ -340,13 +340,13 @@ textarea {
 .footer{
 	overflow: hidden;
 	margin-top: auto;
-	padding-top: 4.7rem;
+	// padding-top: 4.7rem;
+	padding-top: 3rem;
 	&__top{
 		background-color: $color7;
 		left: 50%;
 		margin-left: -630px;
 		overflow: hidden;
-		// padding-left: 3rem;
 		position: relative;
 		.container{
 			margin-left: 0;
@@ -445,6 +445,12 @@ textarea {
 				background-color: $color9
 			}
 		}
+	}
+}
+
+.homepage{
+	.footer{
+		padding-top: 4.7rem;
 	}
 }
 

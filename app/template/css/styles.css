@@ -348,7 +348,7 @@ textarea {
 .footer {
   overflow: hidden;
   margin-top: auto;
-  padding-top: 4.7rem; }
+  padding-top: 3rem; }
   .footer__top {
     background-color: #2a2a2a;
     left: 50%;
@@ -423,6 +423,9 @@ textarea {
       text-decoration: none; }
       .footer .copyright a:hover {
         background-color: #f50e00; }
+
+.homepage .footer {
+  padding-top: 4.7rem; }
 
 #totop {
   background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAQAAADIBVVwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBAUWMjcYYGhnAAAAlElEQVQY033QPQqAMAyG4UDPIDgJTp5K8ACCq+CRBFfBVXAVPEmhIDi9Dio19SeZ8uWB/ggSdERLSxTmIcuxAFjyb5jQc6+e5A2WOMJylBpmjHzVSHZAQ82qVguLmldqjDCrcKPBYGjYVD6LGqfjmPM6033loaN6/GnlH3jBgfTBBCFl8NBSvKKrCywIHfEvE4SYbgdFx1y4R66hlgAAAABJRU5ErkJggg==") no-repeat center center;
