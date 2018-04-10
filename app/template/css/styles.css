@@ -787,6 +787,7 @@ perspective effects (not including the modals and the overlay).
   top: 50%;
   left: 0;
   right: 0;
+  bottom: 0;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1395,8 +1396,7 @@ perspective effects (not including the modals and the overlay).
   .modal-open .inner {
     filter: blur(6px); }
 
-.modal,
-.md-modal1 {
+.modal {
   padding-right: 0 !important;
   position: fixed;
   top: 16%;
@@ -1406,9 +1406,10 @@ perspective effects (not including the modals and the overlay).
   z-index: 2000;
   overflow: hidden;
   outline: 0;
-  visibility: hidden; }
-  .modal.show .modal-dialog,
-  .md-modal1.show .modal-dialog {
+  visibility: hidden;
+  bottom: 0;
+  height: 100%; }
+  .modal.show .modal-dialog {
     transform: translate(0, 0); }
 
 .modal-open .modal,
@@ -2739,7 +2740,10 @@ tbody.collapse.show {
         text-align: center; }
       .feedback .row textarea,
       #order .row textarea {
-        margin-top: -.7rem; } }
+        margin-top: -.7rem; }
+  .listService-about,
+  .gallery-about {
+    justify-content: center !important; } }
 
 @media (max-width: 600px) {
   .info .clients .flexbox a {
@@ -2780,7 +2784,24 @@ tbody.collapse.show {
     padding-left: 15px;
     padding-right: 15px; } }
 
+@media (max-height: 660px) {
+  .md-modal {
+    height: 100%; } }
+
+@media (max-width: 550px) {
+  .listService {
+    display: block; }
+  .service {
+    margin-right: auto !important;
+    margin-left: auto !important; }
+    .service__text {
+      height: auto; } }
+
 @media (max-width: 500px) {
+  #slogans .slick-slide {
+    padding-left: 10px; }
+  .info {
+    padding-left: 15px; }
   .catscarousel .container {
     padding-left: 0;
     padding-right: 0; }
@@ -2799,6 +2820,9 @@ tbody.collapse.show {
   .main .gallery {
     display: flex; }
   .product {
+    margin-left: auto;
+    margin-right: auto; }
+  .gallery-reviews a {
     margin-left: auto;
     margin-right: auto; } }
 
@@ -2828,13 +2852,17 @@ tbody.collapse.show {
         display: block; }
   .catalog {
     justify-content: center; }
-  .listService .service,
   .catalog .cat {
     margin-right: 0; }
   .share {
     text-align: center; }
   .ya-share2__item {
-    margin-bottom: .7rem !important; } }
+    margin-bottom: .7rem !important; }
+  .listClients {
+    display: block; }
+    .listClients a {
+      margin-right: 0;
+      height: auto; } }
 
 @media (max-width: 350px) {
   #slogans {

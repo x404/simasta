@@ -18,14 +18,8 @@
 
 
 
-.md-modal{
-
-}
-
-
 // Container that the modal scrolls within
-.modal,
-.md-modal1 {
+.modal {
 	padding-right: 0 !important;
 	position: fixed;
 	top: 16%;
@@ -33,13 +27,12 @@
 	bottom: 0;
 	left: 0;
 	z-index: 2000;
-	// display: none;
 	overflow: hidden;
 	outline: 0;
 	visibility: hidden;
-	// -webkit-backface-visibility: hidden;
-	// -moz-backface-visibility: hidden;
-	// backface-visibility: hidden;
+
+	bottom: 0;
+	height: 100%;
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {

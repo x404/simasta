@@ -289,6 +289,11 @@
 			}
 		}
 	}
+
+	.listService-about,
+	.gallery-about{
+		justify-content: center !important
+	}
 }
 
 
@@ -363,7 +368,36 @@
 
 
 
+@media (max-height: 660px){
+	.md-modal {
+		height: 100%;
+	}
+}
+
+@media (max-width: 550px){
+	.listService {
+		display: block;
+	}
+
+	.service{
+		margin-right: auto !important;
+		margin-left: auto !important;
+		&__text{
+			height: auto;
+		}
+	}
+
+}
+
+
 @media (max-width: 500px){
+	#slogans .slick-slide{
+		padding-left: 10px;
+	}
+
+	.info{
+		padding-left: 15px;
+	}
 	.catscarousel{
 		.container{
 			padding-left: 0;
@@ -400,6 +434,11 @@
 	}
 
 	.product{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.gallery-reviews a{
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -452,9 +491,8 @@
 		justify-content: center;
 	}
 
-	.listService .service,
+	// .listService .service,
 	.catalog .cat
-
 	{
 		margin-right: 0;
 	}
@@ -465,6 +503,14 @@
 	}
 	.ya-share2__item{
 		margin-bottom: .7rem !important;
+	}
+
+	.listClients{
+		display: block;
+		a{
+			margin-right: 0;
+			height: auto;
+		}
 	}
 }
 
@@ -480,4 +526,5 @@
 	.main .title span{
 		font-size: 2.6rem;
 	}
+
 }
