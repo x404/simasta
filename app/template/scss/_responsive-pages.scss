@@ -261,6 +261,26 @@
 			}
 		}
 	}
+
+	.page-error{
+		.error{
+			margin-left: 0;
+			padding-top: 0;
+			text-align: center;
+			p{
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.box{
+			position: static;
+			margin-left: auto;
+			margin-right: auto;
+			&:before{
+				display: none;
+			}
+		}
+	}
 }
 
 
@@ -526,5 +546,13 @@
 	.main .title span{
 		font-size: 2.6rem;
 	}
-
+	.page-error{
+		.num{
+			font-size: 140px;
+		}
+		.error__title{
+			font-size: 3.2rem;
+			width: 100%;
+		}
+	}
 }

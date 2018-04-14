@@ -2717,7 +2717,20 @@ tbody.collapse.show {
   .new__meta .date {
     font-size: 4.6rem; }
   .new__meta .month {
-    font-size: 2.5rem; } }
+    font-size: 2.5rem; }
+  .page-error .error {
+    margin-left: 0;
+    padding-top: 0;
+    text-align: center; }
+    .page-error .error p {
+      margin-left: auto;
+      margin-right: auto; }
+  .page-error .box {
+    position: static;
+    margin-left: auto;
+    margin-right: auto; }
+    .page-error .box:before {
+      display: none; } }
 
 @media (max-width: 650px) {
   #slogans .slick-list {
@@ -2870,4 +2883,9 @@ tbody.collapse.show {
     #slogans .slick-list {
       font-size: 2.5rem; }
   .main .title span {
-    font-size: 2.6rem; } }
+    font-size: 2.6rem; }
+  .page-error .num {
+    font-size: 140px; }
+  .page-error .error__title {
+    font-size: 3.2rem;
+    width: 100%; } }
