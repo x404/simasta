@@ -177,9 +177,9 @@ h3 {
   .tdn:hover, .footer__contacts a:hover, .footer__menu ul li a:hover, .info .intro__link:hover, .info .clients .more a:hover, main a:hover, .pagination a:hover, .policy a:hover {
     text-decoration: underline; }
 
-.tdu, .header .contacts .call, .page-error .box a {
+.tdu, .header .contacts .call, .info .review a, .page-error .box a {
   text-decoration: underline; }
-  .tdu:hover, .header .contacts .call:hover, .page-error .box a:hover {
+  .tdu:hover, .header .contacts .call:hover, .info .review a:hover, .page-error .box a:hover {
     text-decoration: none; }
 
 .before, .footer__menu ul li a:before, .line-animate:before, .info .cats a:before, .info .review blockquote:before, .info .review blockquote:after, .text-lineboth:before, .text-lineboth:after, .gallery a:after, .gallery a:before, .btn:after, .feedback:after, .feedback:before,

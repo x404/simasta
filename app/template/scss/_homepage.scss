@@ -187,6 +187,7 @@
 		padding: .5rem .8rem 1rem;
 		a{
 			color: inherit;
+			@extend .tdu;
 		}
 		blockquote{
 			line-height: 1.3;
