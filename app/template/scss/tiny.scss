@@ -47,11 +47,15 @@ ul{
 	}
 }
 
-.gallery{
-	margin-top: 2rem;
-}
-
-.listService,
-.catalog{
-	margin-bottom: -1rem;
+table{
+	border-collapse: collapse;
+	color: #333;
+	font-family: 'CenturyGothic';
+	font-style: italic;
+	margin-top: 10px;
+	td,
+	th{
+		border: 1px solid #d6d6d6;
+		padding: 8px;
+	}
 }
