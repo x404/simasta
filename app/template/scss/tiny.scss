@@ -1,0 +1,57 @@
+a{
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+p{
+	line-height: 1.5;
+	margin: 0;
+}
+
+.title{
+	font-family: 'CenturyGothic';
+	color: #fff;
+	font-style: italic;
+	font-weight: normal;
+	margin-bottom: 3rem;
+	span{
+		background: #000;
+		font-size: 3.3rem;	
+		padding: 0 1.6rem;
+	}
+}
+
+h1{font-family: 'CenturyGothic'; font-style: italic; font-weight: normal; margin-bottom: 3rem; margin-top: 2rem;}
+h2{font-family: 'CenturyGothic';font-size: 22px ; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+h3{font-family: 'CenturyGothic';font-size: 18px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+h4{font-family: 'CenturyGothic';font-size: 16px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+h5{font-family: 'CenturyGothic';font-size: 14px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+h6{font-family: 'CenturyGothic';font-size: 14px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+
+ul{
+	margin: 2rem 0 2rem 0;
+	list-style: none;
+	li{
+		margin: .4rem 0;
+		margin-left: .5rem;
+		padding-left: .5rem;
+		position: relative;
+		&:before{
+			position: absolute;
+			left: 0;
+			top: 0;
+			text-indent: -5px;
+			content: "- ";
+		}
+	}
+}
+
+.gallery{
+	margin-top: 2rem;
+}
+
+.listService,
+.catalog{
+	margin-bottom: -1rem;
+}

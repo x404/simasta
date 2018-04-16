@@ -99,10 +99,10 @@
 	// }
 
 	h2{
-		font-size: 1.8rem;
-		font-style: italic;
-		font-weight: normal;
-		font-family: 'CenturyGothic';
+		// font-size: 1.8rem;
+		// font-style: italic;
+		// font-weight: normal;
+		// font-family: 'CenturyGothic';
 	}
 }
 
@@ -118,6 +118,13 @@ main{
 		line-height: 1.5;
 		margin: 0;
 	}
+
+	h1{font-family: 'CenturyGothic'; font-style: italic; font-weight: normal; margin-bottom: 3rem; margin-top: 2rem;}
+	h2{font-family: 'CenturyGothic';font-size: 22px ; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+	h3{font-family: 'CenturyGothic';font-size: 18px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+	h4{font-family: 'CenturyGothic';font-size: 16px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+	h5{font-family: 'CenturyGothic';font-size: 14px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
+	h6{font-family: 'CenturyGothic';font-size: 14px; font-style: italic; font-weight: normal; margin-bottom: 2rem; margin-top: 2rem;}
 
 	ul{
 		margin: 2rem 0 2rem 0;
@@ -144,6 +151,19 @@ main{
 	.listService,
 	.catalog{
 		margin-bottom: -1rem;
+	}
+
+	table{
+		border-collapse: collapse;
+		color: #333;
+		font-family: 'CenturyGothic';
+		font-style: italic;
+		margin-top: 10px;
+		td,
+		th{
+			border: 1px solid #d6d6d6;
+			padding: 8px;
+		}
 	}
 }
 

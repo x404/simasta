@@ -1,29 +1,88 @@
-.text-center{
-        text-align: center;
-}
-.justifyleft {text-align:left !important; }
-.justifyright {text-align:right !important; }
-.justifycenter {text-align: center !important; }
-.justifyfull {text-align:justify !important; }
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
 
-img.justifyleft, table.justifyleft {float:left; margin-right:10px;margin-bottom:5px;}
-img.justifyright, table.justifyright {float:right; margin-left:10px;margin-bottom:5px;}
-img.justifycenter, table.justifycenter { display: block; margin-left: auto; margin-right: auto;}
+p {
+  line-height: 1.5;
+  margin: 0; }
 
-table{
-	margin: 20px 0;
-}
-.table-bordered td, .table-bordered th{
-	border: 1px solid #dee2e6;
-	padding: 5px 10px
-}
+.title {
+  font-family: 'CenturyGothic';
+  color: #fff;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 3rem; }
+  .title span {
+    background: #000;
+    font-size: 3.3rem;
+    padding: 0 1.6rem; }
 
-th{
-	font-size: 12px;
-	font-weight: 400;
-}
+h1 {
+  font-family: 'CenturyGothic';
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 3rem;
+  margin-top: 2rem; }
 
+h2 {
+  font-family: 'CenturyGothic';
+  font-size: 22px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
 
-p{
-	margin: 0;
-}
+h3 {
+  font-family: 'CenturyGothic';
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
+h4 {
+  font-family: 'CenturyGothic';
+  font-size: 16px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
+h5 {
+  font-family: 'CenturyGothic';
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
+h6 {
+  font-family: 'CenturyGothic';
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
+ul {
+  margin: 2rem 0 2rem 0;
+  list-style: none; }
+  ul li {
+    margin: .4rem 0;
+    margin-left: .5rem;
+    padding-left: .5rem;
+    position: relative; }
+    ul li:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-indent: -5px;
+      content: "- "; }
+
+.gallery {
+  margin-top: 2rem; }
+
+.listService,
+.catalog {
+  margin-bottom: -1rem; }

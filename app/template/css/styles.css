@@ -1608,11 +1608,6 @@ form .thank {
       background: #000;
       font-size: 3.3rem;
       padding: 0 1.6rem; }
-  .main h2 {
-    font-size: 1.8rem;
-    font-style: italic;
-    font-weight: normal;
-    font-family: 'CenturyGothic'; }
 
 main {
   margin-bottom: 3rem; }
@@ -1621,6 +1616,47 @@ main {
   main p {
     line-height: 1.5;
     margin: 0; }
+  main h1 {
+    font-family: 'CenturyGothic';
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 3rem;
+    margin-top: 2rem; }
+  main h2 {
+    font-family: 'CenturyGothic';
+    font-size: 22px;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
+  main h3 {
+    font-family: 'CenturyGothic';
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
+  main h4 {
+    font-family: 'CenturyGothic';
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
+  main h5 {
+    font-family: 'CenturyGothic';
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
+  main h6 {
+    font-family: 'CenturyGothic';
+    font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    margin-top: 2rem; }
   main ul {
     margin: 2rem 0 2rem 0;
     list-style: none; }
@@ -1640,6 +1676,16 @@ main {
   main .listService,
   main .catalog {
     margin-bottom: -1rem; }
+  main table {
+    border-collapse: collapse;
+    color: #333;
+    font-family: 'CenturyGothic';
+    font-style: italic;
+    margin-top: 10px; }
+    main table td,
+    main table th {
+      border: 1px solid #d6d6d6;
+      padding: 8px; }
 
 .listNews {
   margin-left: 2rem;
