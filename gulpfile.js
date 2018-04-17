@@ -137,8 +137,8 @@ var FAVICON_DATA_FILE = 'faviconData.json';
 // package (see the check-for-favicon-update task below).
 gulp.task('generate-favicon', function(done) {
 	realFavicon.generateFavicon({
-		masterPicture: 'assets/app/favicon.png',
-		dest: 'assets/app/the_favicon',
+		masterPicture: 'app/favicon.png',
+		dest: 'app/the_favicon',
 		iconsPath: '/the_favicon/',
 		design: {
 			ios: {
@@ -194,6 +194,7 @@ gulp.task('generate-favicon', function(done) {
 	});
 });
 
+
 // Inject the favicon markups in your HTML pages. You should run
 // this task whenever you modify a page. You can keep this task
 // as is or refactor your existing HTML pipeline.
@@ -234,6 +235,7 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest(config.destDir + '/tmp'));
 	var buildFonts = gulp.src(config.templateDir + '/fonts/**/*').pipe(gulp.dest(config.destDir + '/template/fonts')); // Переносим шрифты в продакшен
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest(config.destDir + '/outdatedbrowser'));
+	var faviconData = gulp.src('app/faviconData.json').pipe(gulp.dest(config.destDir));
 
 });
 
